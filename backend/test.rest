@@ -1,0 +1,134 @@
+POST http://localhost:3000/api/dg-portofolio/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username":"raragata12",
+  "password":"raara112",
+  "name":"Rara Agata"
+}
+
+###
+POST http://localhost:3000/api/dg-portofolio/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username":"raragata12",
+  "password":"raara112"
+}
+
+###
+GET http://localhost:3000/api/dg-portofolio/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 31a5b8e2-cd27-4840-a67f-235042da5f14
+
+###
+PATCH http://localhost:3000/api/dg-portofolio/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 31a5b8e2-cd27-4840-a67f-235042da5f14
+
+{
+  "username":"ragata11",
+  "password":"raraagata123"
+}
+
+###
+DELETE http://localhost:3000/api/dg-portofolio/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 31a5b8e2-cd27-4840-a67f-235042da5f14
+
+###
+POST http://localhost:3000/api/dg-portofolio/projects
+Content-Type: application/json
+Accept: application/json
+Authorization: 3ac340c1-7f03-49f0-8cfa-eb5c91ae4b7e
+
+{
+  "title":"Notes2",
+  "description":"website notes2 berfungsi untuk menyimpan catatan",
+  "startDate": "2024-09-17T00:00:00Z"
+}
+
+###
+GET http://localhost:3000/api/dg-portofolio/projects
+Content-Type: application/json
+Accept: application/json
+
+###
+GET http://localhost:3000/api/dg-portofolio/projects/1
+Content-Type: application/json
+Accept: application/json
+
+###
+PUT http://localhost:3000/api/dg-portofolio/projects/2
+Content-Type: application/json
+Accept: application/json
+Authorization: 3ac340c1-7f03-49f0-8cfa-eb5c91ae4b7e
+
+{
+  "title":"Notes"
+}
+
+###
+DELETE http://localhost:3000/api/dg-portofolio/projects/2
+Content-Type: application/json
+Accept: application/json
+Authorization: 3ac340c1-7f03-49f0-8cfa-eb5c91ae4b7e
+
+###
+POST http://localhost:3000/api/dg-portofolio/skills
+Content-Type: application/json
+Accept: application/json
+Authorization: 3ac340c1-7f03-49f0-8cfa-eb5c91ae4b7e
+
+{
+  "name":"Javascript",
+  "tahun": "2 Tahun"
+}
+
+###
+GET http://localhost:3000/api/dg-portofolio/skills
+Content-Type: application/json
+Accept: application/json
+
+###
+GET http://localhost:3000/api/dg-portofolio/skills/1
+Content-Type: application/json
+Accept: application/json
+
+###
+PUT http://localhost:3000/api/dg-portofolio/skills/1
+Content-Type: application/json
+Accept: application/json
+Authorization: 3ac340c1-7f03-49f0-8cfa-eb5c91ae4b7e
+
+{
+  "tahun": "3 Tahun"
+}
+
+###
+DELETE http://localhost:3000/api/dg-portofolio/skills/1
+Content-Type: application/json
+Accept: application/json
+Authorization: 3ac340c1-7f03-49f0-8cfa-eb5c91ae4b7e
+
+###
+POST http://localhost:3000/api/dg-portofolio/contact-me
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Aria Persadanta Ginting",
+  "email": "kdanta13@gmail.com",
+  "subject": "bisnis",
+  "message": "silahkan hubungi email saya untuk bisnis"
+}
+
+###
+GET http://localhost:3000/api/dg-portofolio/contact-me
+Content-Type: application/json
+Accept: application/json
