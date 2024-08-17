@@ -132,3 +132,8 @@ Accept: application/json
 GET http://localhost:3000/api/dg-portofolio/contact-me
 Content-Type: application/json
 Accept: application/json
+
+###
+DELETE http://localhost:3000/api/dg-portofolio/contact-me/1
+Content-Type: application/json
+Accept: application/json
