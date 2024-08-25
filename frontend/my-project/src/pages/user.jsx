@@ -1,9 +1,12 @@
+import UserFragment from "../components/Fragments/DashboardFragment/UserFragment";
 import MainLayouts from "../components/Layouts/MainLayouts";
 
 const User = () => {
   return (
     <>
-      <MainLayouts page="user"></MainLayouts>
+      <MainLayouts page="user">
+        <UserFragment></UserFragment>
+      </MainLayouts>
     </>
   );
 };

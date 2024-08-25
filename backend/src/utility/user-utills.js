@@ -20,6 +20,8 @@ const createDataUser = async (data) => {
     select: {
       username: true,
       name: true,
+      createdAt: true,
+      updatedAt: true,
     },
   });
   return result;
@@ -62,6 +64,8 @@ const getUser = async (username) => {
     select: {
       username: true,
       name: true,
+      createdAt: true,
+      updatedAt: true,
     },
   });
   return result;

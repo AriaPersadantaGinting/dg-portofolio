@@ -8,7 +8,7 @@ const Input = (props) => {
       name={name}
       placeholder={placeholder}
       type={type}
-      className={`px-4 py-4 border-2 border-slate-200 m-2 shadow-md   focus:shadow-blue-400 mb-4 ${variant} outline-4`}
+      className={`px-4 py-4 border-2 border-slate-200 m-2 shadow-md focus:shadow-blue-400 mb-4 ${variant} outline-4`}
     ></input>
   );
 };

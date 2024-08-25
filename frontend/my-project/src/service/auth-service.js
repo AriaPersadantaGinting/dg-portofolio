@@ -26,7 +26,51 @@ const postDataLogin = async (data, callback) => {
   return result;
 };
 
+const getDataUser = async (callback) => {
+  const result = await axios
+    .get(" http://localhost:3000/api/dg-portofolio/users/current", {
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    })
+    .then((res) => {
+      callback(res.data.data);
+    })
+    .catch((error) => {
+      console.info(error.data);
+      callback(error.data);
+    });
+  return result;
+};
+
+const updateDataUser = async (data) => {
+  try {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      throw new Error("No token found");
+    }
+
+    const response = await axios.patch(
+      "http://localhost:3000/api/dg-portofolio/users/current",
+      data,
+      {
+        headers: {
+          Authorization: token,
+        },
+      }
+    );
+    console.info(response.data.data);
+    return response.data.data; // Mengembalikan data yang diperbarui
+  } catch (error) {
+    console.error("Update failed:", error);
+    throw error; // Lemparkan error jika diperlukan
+  }
+};
+
 export default {
   postDataRegister,
   postDataLogin,
+  getDataUser,
+  updateDataUser,
 };

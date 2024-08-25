@@ -18,7 +18,7 @@ const Sidebar = (props) => {
   // };
 
   return (
-    <aside className="flex flex-col bg-[#020626] w-72 h-[45rem] m-4 rounded-xl overflow-hidden absolute">
+    <aside className="flex flex-col bg-[#020626] w-72 h-[45rem] m-4 rounded-xl overflow-hidden fixed">
       <div className="flex flex-col h-full overflow-y-auto">
         <div className="mt-4 mb-8 text-center">
           <h1 className="text-2xl text-white font-serif inline-block relative">

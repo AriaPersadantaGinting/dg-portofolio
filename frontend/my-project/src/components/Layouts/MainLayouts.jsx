@@ -16,7 +16,7 @@ const MainLayouts = (props) => {
   };
 
   return (
-    <main className="relative w-full h-screen overflow-hidden">
+    <main className="relative w-full min-h-screen overflow-hidden">
       <video
         autoPlay
         loop
@@ -34,7 +34,10 @@ const MainLayouts = (props) => {
             </h1>
           </div>
           <div className="w-44">
-            <Button onClick={handleAktifSideBar} variant="bg-[#020626]">
+            <Button
+              onClick={handleAktifSideBar}
+              variant="bg-[#020626] hover:bg-blue-700 active:bg-blue-800"
+            >
               Dashboard
             </Button>
           </div>
