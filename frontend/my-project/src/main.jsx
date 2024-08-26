@@ -12,6 +12,10 @@ import Users from "./pages/user";
 import Contact from "./pages/contact";
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <CreateFormProject></CreateFormProject>,
+  // },
   {
     path: "/register",
     element: <Register></Register>,

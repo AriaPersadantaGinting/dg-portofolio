@@ -39,8 +39,7 @@ Authorization: 31a5b8e2-cd27-4840-a67f-235042da5f14
 DELETE http://localhost:3000/api/dg-portofolio/users/current
 Content-Type: application/json
 Accept: application/json
-Authorization: 31a5b8e2-cd27-4840-a67f-235042da5f14
-
+Authorization: 2a76d406-2920-40d8-a534-61c678d0c3d4
 ###
 POST http://localhost:3000/api/dg-portofolio/projects
 Content-Type: application/json
@@ -48,9 +47,9 @@ Accept: application/json
 Authorization: 3ac340c1-7f03-49f0-8cfa-eb5c91ae4b7e
 
 {
-  "title":"Notes2",
+  "title":"Notes3",
   "description":"website notes2 berfungsi untuk menyimpan catatan",
-  "startDate": "2024-09-17T00:00:00Z"
+  "startDate": "2024-08-26T00:00:00.000Z"
 }
 
 ###
@@ -64,13 +63,13 @@ Content-Type: application/json
 Accept: application/json
 
 ###
-PUT http://localhost:3000/api/dg-portofolio/projects/2
+PUT http://localhost:3000/api/dg-portofolio/projects/3
 Content-Type: application/json
 Accept: application/json
 Authorization: 3ac340c1-7f03-49f0-8cfa-eb5c91ae4b7e
 
 {
-  "title":"Notes"
+  "url":"www.example.com"
 }
 
 ###

@@ -86,9 +86,12 @@ const findUserByToken = async (token) => {
 };
 
 const removeUser = async (username) => {
-  const result = await prismaClient.user.delete({
+  const result = await prismaClient.user.update({
     where: {
       username,
+    },
+    data: {
+      token: null,
     },
   });
 };
