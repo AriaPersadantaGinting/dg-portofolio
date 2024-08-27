@@ -100,13 +100,13 @@ Content-Type: application/json
 Accept: application/json
 
 ###
-PUT http://localhost:3000/api/dg-portofolio/skills/1
+PUT http://localhost:3000/api/dg-portofolio/skills/4
 Content-Type: application/json
 Accept: application/json
-Authorization: 3ac340c1-7f03-49f0-8cfa-eb5c91ae4b7e
+Authorization: 3d4b0a43-761c-4976-ab5e-dd75621f0691
 
 {
-  "tahun": "3 Tahun"
+  "description": "HTML (HyperText Markup Language) adalah bahasa markup standar yang digunakan untuk membuat dan menyusun halaman web."
 }
 
 ###

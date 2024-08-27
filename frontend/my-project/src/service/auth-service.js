@@ -132,6 +132,70 @@ const fetchUpdateProject = async (projectId, data) => {
   }
 };
 
+// skills
+const fetchCreateSkill = async (data) => {
+  try {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      throw new Error("No token found");
+    }
+
+    const response = await axios.post(
+      "http://localhost:3000/api/dg-portofolio/skills",
+      data,
+      {
+        headers: {
+          Authorization: token,
+        },
+      }
+    );
+    console.info(response.data.data);
+    return response.data.data; // Mengembalikan data yang diperbarui
+  } catch (error) {
+    console.error("Update failed:", error);
+    throw error; // Lemparkan error jika diperlukan
+  }
+};
+
+const fetchAllSkill = async (callback) => {
+  try {
+    const response = await axios.get(
+      `http://localhost:3000/api/dg-portofolio/skills`
+    );
+    callback(response.data.data);
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
+const fetchUpdateSkill = async (skillId, data) => {
+  try {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      throw new Error("No token found");
+    }
+
+    const response = await axios.put(
+      `http://localhost:3000/api/dg-portofolio/skills/${skillId}`,
+      data,
+      {
+        headers: {
+          Authorization: token,
+        },
+      }
+    );
+
+    console.info(response.data.data);
+    return response.data.data; // Mengembalikan data yang diperbarui
+  } catch (error) {
+    console.error("Update failed:", error);
+    throw error; // Lemparkan error jika diperlukan
+  }
+};
+
 export default {
   postDataRegister,
   postDataLogin,
@@ -140,4 +204,7 @@ export default {
   fetchCreateProject,
   fetchAllProject,
   fetchUpdateProject,
+  fetchCreateSkill,
+  fetchAllSkill,
+  fetchUpdateSkill,
 };

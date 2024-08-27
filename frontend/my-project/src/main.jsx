@@ -10,12 +10,13 @@ import Skill from "./pages/skill";
 import Project from "./pages/project";
 import Users from "./pages/user";
 import Contact from "./pages/contact";
+import CreateFormSkill from "./components/Fragments/Form/CreateFormSkill";
 
 const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element: <CreateFormProject></CreateFormProject>,
-  // },
+  {
+    path: "/",
+    element: <CreateFormSkill></CreateFormSkill>,
+  },
   {
     path: "/register",
     element: <Register></Register>,

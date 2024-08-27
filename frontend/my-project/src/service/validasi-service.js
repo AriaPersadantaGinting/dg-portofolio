@@ -93,9 +93,7 @@ export const handleCreateProject = async (event) => {
 
 export const handleUpdateProject = async (event) => {
   event.preventDefault();
-
   const formData = new FormData(event.target);
-
   const data = {
     id: formData.get("id"),
     title: formData.get("title"),
@@ -105,9 +103,6 @@ export const handleUpdateProject = async (event) => {
     endDate: formatToISO(formData.get("endDate")),
     image: formData.get("image"),
   };
-
-  console.info(data);
-
   try {
     await authService.fetchUpdateProject(data.id, data);
     window.location.href = "/project";
