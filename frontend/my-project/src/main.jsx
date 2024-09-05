@@ -10,12 +10,18 @@ import Skill from "./pages/skill";
 import Project from "./pages/project";
 import Users from "./pages/user";
 import Contact from "./pages/contact";
-import CreateFormSkill from "./components/Fragments/Form/CreateFormSkill";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Drag from "./components/Elements/Motion/drag";
+import Home from "./pages/home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <CreateFormSkill></CreateFormSkill>,
+    element: <Home></Home>,
+  },
+  {
+    path: "/drag",
+    element: <Drag></Drag>,
   },
   {
     path: "/register",

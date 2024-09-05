@@ -7,15 +7,9 @@ import { Link } from "react-router-dom";
 const Sidebar = (props) => {
   const { page, onClose } = props;
   const [tombolAktif, setTombolAktif] = useState(page);
-  // const [closeSideBar, setCloseSideBar] = useState(true);
-
   const handleToggle = (tombol) => {
     setTombolAktif(tombol);
   };
-
-  // const handleCloseSideBar = () => {
-  //   setCloseSideBar(false);
-  // };
 
   return (
     <aside className="flex flex-col bg-[#020626] w-72 h-[45rem] m-4 rounded-xl overflow-hidden fixed z-[999]">

@@ -6,3 +6,34 @@ body {
   width: 38rem;
   /* background-color: rgb(20, 2, 55); */
 }
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-50rem);
+    /* opacity: -100; */
+  }
+  15% {
+    opacity: 20;
+  }
+  30% {
+    opacity: 40;
+  }
+  50% {
+    opacity: 60;
+  }
+  75% {
+    opacity: 100;
+  }
+  100% {
+    transform: translateX(60rem);
+    opacity: 0;
+  }
+}
+
+.animate {
+  animation: leftToRight 30s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}

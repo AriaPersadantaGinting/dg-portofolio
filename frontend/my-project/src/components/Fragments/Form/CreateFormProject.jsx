@@ -58,9 +58,9 @@ const CreateFormProject = (props) => {
                 variant="w-[27rem] rounded-full pl-4 focus:outline-8 focus:outline-blue-700"
               ></Input>
               <Input
-                htmlFor="Image"
-                name="Image"
-                id="Image"
+                htmlFor="image"
+                name="image"
+                id="image"
                 type="text"
                 placeholder="Image"
                 variant="w-[27rem] rounded-full pl-4 focus:outline-8 focus:outline-blue-700"
