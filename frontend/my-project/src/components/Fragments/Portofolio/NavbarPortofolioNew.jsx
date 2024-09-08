@@ -9,6 +9,7 @@ const NavbarPortofolioNew = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuRef = useRef(null);
+  const sidebarRef = useRef(null); // Tambahkan ref untuk sidebar
 
   const variants = {
     hover: {
@@ -95,8 +96,14 @@ const NavbarPortofolioNew = () => {
     setIsOpen((prev) => !prev);
   };
 
+  // Fungsi untuk menangani klik di luar elemen, diperbarui agar mengecek klik di luar sidebar juga
   const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target) &&
+      sidebarRef.current && // Tambahkan pengecekan untuk sidebar
+      !sidebarRef.current.contains(event.target)
+    ) {
       setIsOpen(false);
     }
   };
@@ -107,101 +114,200 @@ const NavbarPortofolioNew = () => {
   }, []);
 
   return (
-    <nav className="w-[85.6rem] fixed flex z-[9999] justify-between py-6 ">
-      <div className="flex relative ml-12 items-center">
-        <img
-          src="/src/assets/bg11.webp"
-          className="w-10 h-10 rounded-md mr-2"
-          alt=""
-        />
-        <h1 className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#44dddc] via-[#e17bef] to-green-500 font-bold">
-          Aria Persadanta Ginting
-        </h1>
-      </div>
-      <div className="flex mr-1 w-80 relative backdrop-blur-sm">
-        <motion.div
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          variants={variants}
-          className={`flex justify-between items-center w-40 px-2 py-4 mr-4 rounded-xl cursor-pointer ${
-            isHovered
-              ? "bg-gradient-to-r from-[#6c5483] via-[#24639b] to-green-500"
-              : "bg-[rgba(61,58,60,0.5)]"
-          }`}
-          style={{
-            backgroundColor: isHovered ? "" : "bg-[rgba(61,58,60,0.5)]",
-            backdropFilter: isHovered ? "none" : "blur(4px)",
-          }}
-        >
-          <div className="relative">
-            <motion.button
-              initial="noHover"
-              animate={isHovered ? "hover" : "noHover"}
-              variants={variantsButton}
-              transition={{ duration: 0.5 }}
-              className={`font-bold font-mono absolute left-2 top-[-0.7rem] w-24`}
-            >
-              Let's Talk
-            </motion.button>
-            <motion.button
-              initial="noHover1"
-              animate={isHovered ? "hover1" : "noHover1"}
-              variants={variantsButton}
-              transition={{ duration: 0.5 }}
-              className={`font-bold font-mono absolute left-2 top-[-0.7rem] w-24`}
-            >
-              Let's Talk
-            </motion.button>
-          </div>
-          <motion.span
-            animate={isHovered ? "hover2" : "noHover2"}
-            variants={variantsButton}
-            transition={{ duration: 0.5 }}
-            className="font-bold text-xl mr-4"
+    <>
+      {/* <nav className="w-[85.6rem] fixed flex z-[9999] justify-between py-6 ">
+        <div className="flex relative ml-12 items-center">
+          <img
+            src="/src/assets/bg11.webp"
+            className="w-10 h-10 rounded-md mr-2"
+            alt=""
+          />
+          <h1 className="text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#44dddc] via-[#e17bef] to-green-500 font-bold">
+            Aria Persadanta Ginting
+          </h1>
+        </div>
+        <div className="flex mr-1 w-80 relative backdrop-blur-sm">
+          <motion.div
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            variants={variants}
+            className={`flex justify-between items-center w-40 px-2 py-4 mr-4 rounded-xl cursor-pointer ${
+              isHovered
+                ? "bg-gradient-to-r from-[#6c5483] via-[#24639b] to-green-500"
+                : "bg-[rgba(61,58,60,0.5)]"
+            }`}
+            style={{
+              backgroundColor: isHovered ? "" : "bg-[rgba(61,58,60,0.5)]",
+              backdropFilter: isHovered ? "none" : "blur(4px)",
+            }}
           >
-            •
-          </motion.span>
-        </motion.div>
-        <motion.div
-          animate={getAnimationVariant() || isOpen ? "hover3" : "noHover3"}
-          onClick={handleButtonClick}
-          className="flex justify-between items-center w-28 px-2 py-4 bg-white rounded-xl cursor-pointer"
-          id="button2"
-          onMouseEnter={() => setIsHovered2(true)}
-          onMouseLeave={() => setIsHovered2(false)}
-          ref={menuRef}
-        >
-          <div className="relative">
-            <motion.button
-              animate={isHovered2 ? "hover3" : "noHover3"}
+            <div className="relative">
+              <motion.button
+                initial="noHover"
+                animate={isHovered ? "hover" : "noHover"}
+                variants={variantsButton}
+                transition={{ duration: 0.5 }}
+                className={`font-bold font-mono absolute left-2 top-[-0.7rem] w-24`}
+              >
+                Let's Talk
+              </motion.button>
+              <motion.button
+                initial="noHover1"
+                animate={isHovered ? "hover1" : "noHover1"}
+                variants={variantsButton}
+                transition={{ duration: 0.5 }}
+                className={`font-bold font-mono absolute left-2 top-[-0.7rem] w-24`}
+              >
+                Let's Talk
+              </motion.button>
+            </div>
+            <motion.span
+              animate={isHovered ? "hover2" : "noHover2"}
               variants={variantsButton}
               transition={{ duration: 0.5 }}
-              className="text-black font-bold font-serif absolute -left-5 w-24"
+              className="font-bold text-xl mr-4"
             >
-              MENU
-            </motion.button>
-            <motion.button
-              animate={isHovered2 ? "hover4" : "noHover4"}
-              variants={variantsButton}
-              transition={{ duration: 0.5 }}
-              className="text-black font-bold font-serif absolute -left-5 w-24"
-            >
-              MENU
-            </motion.button>
-          </div>
-          <motion.span
-            initial="noHover5"
-            animate={isHovered2 ? "hover5" : "noHover5"}
-            variants={variantsButton}
-            transition={{ duration: 0.5 }}
-            className="font-bold text-xl mr-4"
+              •
+            </motion.span>
+          </motion.div>
+          <motion.div
+            animate={getAnimationVariant() || isOpen ? "hover3" : "noHover3"}
+            onClick={handleButtonClick}
+            className="flex justify-between items-center w-28 px-2 py-4 bg-white rounded-xl cursor-pointer"
+            id="button2"
+            onMouseEnter={() => setIsHovered2(true)}
+            onMouseLeave={() => setIsHovered2(false)}
+            ref={menuRef}
           >
-            •
-          </motion.span>
-        </motion.div>
-      </div>
-      {isOpen && <MenuSidebar />}
-    </nav>
+            <div className="relative">
+              <motion.button
+                animate={isHovered2 ? "hover3" : "noHover3"}
+                variants={variantsButton}
+                transition={{ duration: 0.5 }}
+                className="text-black font-bold font-serif absolute -left-5 w-24"
+              >
+                MENU
+              </motion.button>
+              <motion.button
+                animate={isHovered2 ? "hover4" : "noHover4"}
+                variants={variantsButton}
+                transition={{ duration: 0.5 }}
+                className="text-black font-bold font-serif absolute -left-5 w-24"
+              >
+                MENU
+              </motion.button>
+            </div>
+            <motion.span
+              initial="noHover5"
+              animate={isHovered2 ? "hover5" : "noHover5"}
+              variants={variantsButton}
+              transition={{ duration: 0.5 }}
+              className="font-bold text-xl mr-4"
+            >
+              •
+            </motion.span>
+          </motion.div>
+        </div>
+        {isOpen && <MenuSidebar ref={sidebarRef} />}{" "}
+      </nav> */}
+      <nav className="w-full lg:w-[78rem] fixed flex z-[9999] justify-between py-6">
+        <div className="flex relative ml-4 lg:ml-12 items-center">
+          <img
+            src="/src/assets/bg11.webp"
+            className="w-8 h-8 lg:w-10 lg:h-10 rounded-md mr-2"
+            alt=""
+          />
+          <h1 className="text-lg lg:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#44dddc] via-[#e17bef] to-green-500 font-bold">
+            Aria Persadanta Ginting
+          </h1>
+        </div>
+        <div className="flex mr-1 w-full lg:w-80 relative backdrop-blur-sm">
+          <motion.div
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            variants={variants}
+            className={`flex justify-between items-center w-full lg:w-40 px-2 py-3 lg:py-4 mr-2 lg:mr-4 rounded-xl cursor-pointer ${
+              isHovered
+                ? "bg-gradient-to-r from-[#6c5483] via-[#24639b] to-green-500"
+                : "bg-[rgba(61,58,60,0.5)]"
+            }`}
+            style={{
+              backgroundColor: isHovered ? "" : "bg-[rgba(61,58,60,0.5)]",
+              backdropFilter: isHovered ? "none" : "blur(4px)",
+            }}
+          >
+            <div className="relative">
+              <motion.button
+                initial="noHover"
+                animate={isHovered ? "hover" : "noHover"}
+                variants={variantsButton}
+                transition={{ duration: 0.1 }}
+                className="font-bold font-mono absolute left-1 lg:left-2 top-[-0.5rem] lg:top-[-0.7rem] w-20 lg:w-24"
+              >
+                Let's Talk
+              </motion.button>
+              <motion.button
+                initial="noHover1"
+                animate={isHovered ? "hover1" : "noHover1"}
+                variants={variantsButton}
+                transition={{ duration: 0.1 }}
+                className="font-bold font-mono absolute left-1 lg:left-2 top-[-0.5rem] lg:top-[-0.7rem] w-20 lg:w-24"
+              >
+                Let's Talk
+              </motion.button>
+            </div>
+            <motion.span
+              animate={isHovered ? "hover2" : "noHover2"}
+              variants={variantsButton}
+              transition={{ duration: 0.1 }}
+              className="font-bold text-lg lg:text-xl mr-2 lg:mr-4"
+            >
+              •
+            </motion.span>
+          </motion.div>
+          <motion.div
+            animate={getAnimationVariant() || isOpen ? "hover3" : "noHover3"}
+            onClick={handleButtonClick}
+            className="flex justify-between items-center w-full md:w-28 px-2 py-3 md:py-4 bg-white rounded-xl cursor-pointer"
+            id="button2"
+            onMouseEnter={() => setIsHovered2(true)}
+            onMouseLeave={() => setIsHovered2(false)}
+            ref={menuRef}
+          >
+            <div className="relative">
+              <motion.button
+                animate={isHovered2 ? "hover3" : "noHover3"}
+                variants={variantsButton}
+                transition={{ duration: 0.1 }}
+                className="text-black font-bold font-serif absolute -left-4 lg:-left-5 w-20 lg:w-24"
+              >
+                MENU
+              </motion.button>
+              <motion.button
+                animate={isHovered2 ? "hover4" : "noHover4"}
+                variants={variantsButton}
+                transition={{ duration: 0.1 }}
+                className="text-black font-bold font-serif absolute -left-4 lg:-left-5 w-20 lg:w-24"
+              >
+                MENU
+              </motion.button>
+            </div>
+            <motion.span
+              initial="noHover5"
+              animate={isHovered2 ? "hover5" : "noHover5"}
+              variants={variantsButton}
+              transition={{ duration: 0.1 }}
+              className="font-bold text-lg lg:text-xl mr-2 lg:mr-4"
+            >
+              •
+            </motion.span>
+          </motion.div>
+        </div>
+        {isOpen && <MenuSidebar ref={sidebarRef} />}{" "}
+      </nav>
+
+      {/* Tambahkan ref pada sidebar */}
+    </>
   );
 };
 

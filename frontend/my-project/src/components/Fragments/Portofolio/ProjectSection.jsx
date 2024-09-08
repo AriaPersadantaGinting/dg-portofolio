@@ -70,7 +70,7 @@ const ProjectSection = () => {
       <div className="w-full">
         <img
           src="/src/assets/arrow.jpg"
-          className="w-24 h-20 ml-[40rem] rounded-full"
+          className="lg:w-16 lg:h-16 ml-[37.7rem] rounded-full"
           alt=""
         />
       </div>
@@ -88,7 +88,7 @@ const ProjectSection = () => {
             {/* Gambar akan dipilih berdasarkan indeks */}
             <img
               src={`/src/assets/${imageLabels[index % imageLabels.length]}.jpg`}
-              className={`w-[26.1rem] h-64 rounded-xl transform transition-transform duration-1000 ${
+              className={`lg:w-[24.1rem] h-64 rounded-xl transform transition-transform duration-1000 ${
                 isHovered === project.id
                   ? "scale-110 opacity-75 blur-sm"
                   : "scale-100 opacity-100"

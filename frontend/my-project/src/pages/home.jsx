@@ -1,4 +1,4 @@
-import PortofolioLayouts from "../components/Layouts/PortfolioLayouts";
+import PortofolioLayouts from "../components/Layouts/HomeLayouts";
 
 const Home = () => {
   return (

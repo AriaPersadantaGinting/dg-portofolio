@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import igIcon from "/src/assets/ig.svg";
 import ytIcon from "/src/assets/yt.svg";
 import tiktokIcon from "/src/assets/tiktok.svg";
 import fbIcon from "/src/assets/fb.svg";
 
-const FooterSection = () => {
+const FooterSection = (props) => {
+  const { styles } = props;
   const icons = [
     { src: igIcon, alt: "Instagram" },
     { src: ytIcon, alt: "Youtube" },
@@ -12,7 +14,7 @@ const FooterSection = () => {
   ];
   return (
     <>
-      <footer className="relative -bottom-[75rem]">
+      <footer className={`relative -bottom-[67.4rem] pb-14 ${styles}`}>
         <div className="flex justify-center">
           {icons.map((icon, index) => (
             <div

@@ -1,6 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import "./index.css";
 import "./App.css";
 import Register from "./pages/register";
@@ -13,11 +17,24 @@ import Contact from "./pages/contact";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Drag from "./components/Elements/Motion/drag";
 import Home from "./pages/home";
+import About from "./pages/about";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Navigate to="/home" />,
+  },
+  {
+    path: "/home",
     element: <Home></Home>,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/project",
+    element: <About />,
   },
   {
     path: "/drag",

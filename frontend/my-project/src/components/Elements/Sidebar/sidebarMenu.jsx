@@ -1,26 +1,28 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const variants = {
   hover: {
-    translateX: "0%", // Posisi teks saat di-hover
+    x: "0%", // Posisi teks saat di-hover
     opacity: 1, // Opacity saat di-hover
   },
   noHover: {
-    translateX: "-20%", // Posisi teks saat tidak di-hover
+    x: "-20%", // Posisi teks saat tidak di-hover
     opacity: 0, // Opacity saat tidak di-hover
   },
   hover1: {
-    translateX: "0%", // Posisi teks saat di-hover
+    x: "0%", // Posisi teks saat di-hover
     opacity: 1, // Opacity saat di-hover
   },
   noHover1: {
-    translateX: "-20%", // Posisi teks saat tidak di-hover
+    x: "-20%", // Posisi teks saat tidak di-hover
     opacity: 1, // Opacity saat tidak di-hover
   },
 };
 
-const MenuSidebar = () => {
+// eslint-disable-next-line react/display-name
+const MenuSidebar = forwardRef((props, ref) => {
   const [isHover, setIsHover] = useState(null);
 
   const handleMouseEnter = (id) => {
@@ -31,8 +33,17 @@ const MenuSidebar = () => {
     setIsHover(null);
   };
 
+  // Prevent sidebar from closing when clicking inside
+  const handleSidebarClick = (event) => {
+    event.stopPropagation();
+  };
+
   return (
-    <aside className="w-[18rem] fixed right-16 top-24 bg-[rgba(61,58,60,0.5)] rounded-xl backdrop-blur-md">
+    <aside
+      ref={ref}
+      className="md:w-[18rem] fixed md:right-[2.7rem] top-24 bg-[rgba(61,58,60,0.5)] rounded-xl backdrop-blur-md z-[5000]"
+      onClick={handleSidebarClick}
+    >
       {["Home", "About", "Project", "Skill", "Contact"].map((label, index) => (
         <div
           key={index}
@@ -49,20 +60,25 @@ const MenuSidebar = () => {
           >
             →
           </motion.span>
-          <motion.a
-            href="#"
+          <motion.div
             variants={variants}
             initial="noHover1"
             animate={isHover === index ? "hover1" : "noHover1"}
             transition={{ duration: 0.5 }}
             className="text-2xl text-white w-28 inline-block h-10 mt-2 ml-4"
           >
-            {label}
-          </motion.a>
+            <Link
+              to={`/${label.toLowerCase()}`}
+              className="h-full w-full rounded-xl flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()} // Prevent link click from closing sidebar
+            >
+              {label}
+            </Link>
+          </motion.div>
         </div>
       ))}
     </aside>
   );
-};
+});
 
 export default MenuSidebar;
