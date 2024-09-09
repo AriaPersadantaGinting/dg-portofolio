@@ -18,6 +18,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Drag from "./components/Elements/Motion/drag";
 import Home from "./pages/home";
 import About from "./pages/about";
+import ProjectLayouts from "./components/Layouts/ProjectLayouts";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/project",
-    element: <About />,
+    element: <ProjectLayouts />,
   },
   {
     path: "/drag",

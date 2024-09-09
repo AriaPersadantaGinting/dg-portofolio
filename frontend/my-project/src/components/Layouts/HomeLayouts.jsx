@@ -18,9 +18,13 @@ const PortofolioLayouts = () => {
         <HomeSection></HomeSection>
         <ProjectSection></ProjectSection>
         <SkillSection></SkillSection>
-        <ContactSection></ContactSection>
+        <ContactSection
+          styles="top-[141rem]"
+          styles2="top-[150rem]"
+          styles3="mt-[5rem]"
+        />
       </main>
-      <FooterSection></FooterSection>
+      <FooterSection styles="-bottom-[70rem]" />
     </>
   );
 };

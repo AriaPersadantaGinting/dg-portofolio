@@ -38,7 +38,7 @@ const ContactSection = (props) => {
   };
   return (
     <>
-      <section className={`mt-4 ${styles3}`}>
+      <section className={`mt-20 ${styles3}`}>
         <div className="flex w-[71rem]  mx-auto overflow-hidden">
           <motion.h1
             initial={{ scale: 1.4, scaleY: 1.2 }}
