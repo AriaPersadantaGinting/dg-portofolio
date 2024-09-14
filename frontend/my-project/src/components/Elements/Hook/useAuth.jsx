@@ -5,11 +5,7 @@ const UseAuth = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (!token) {
-      navigate("/login"); // Ganti '/login' dengan route halaman login Anda
-    }
+    navigate("/login"); // Ganti '/login' dengan route halaman login Anda
   }, [navigate]);
 };
 

@@ -33,7 +33,6 @@ const ProjectSection = () => {
   const variants = {
     imgEffect: {
       opacity: 1,
-      // filter: ["blur(3px)", "blur(2px)", "blur(1px)", "blur(0px)"],
       transition: {
         duration: 2,
         delay: 1,
@@ -61,7 +60,7 @@ const ProjectSection = () => {
       variants={variants}
       className={`flex flex-wrap mt-44 transition-opacity duration-[3000ms]`}
     >
-      <div className="flex w-full mb-4">
+      <div className="flex w-[100vw] mb-4">
         <h2 className="text-white text-2xl font-indieFLower relative mx-auto tracking-widest">
           Some Recent Work
         </h2>
@@ -70,7 +69,7 @@ const ProjectSection = () => {
       <div className="w-full">
         <img
           src="/src/assets/arrow.jpg"
-          className="lg:w-16 lg:h-16 ml-[37.7rem] rounded-full"
+          className="lg:w-[5vw] lg:h-[5vw] lg:ml-[47.5vw] md:w-[7vw] md:h-[7vw] md:ml-[46.5vw] md:mb-4 rounded-full"
           alt=""
         />
       </div>
@@ -81,14 +80,14 @@ const ProjectSection = () => {
             whileInView="imgEffect"
             variants={variants}
             key={project.id}
-            className="ml-4 mr-4 h-64 mb-8 cursor-pointer relative overflow-hidden"
+            className="lg:ml-[1.5vw] lg:mr-[1vw] lg:h-64 lg:mb-8 md:ml-[1.5vw] md:mr-[1.2vw] md:h-[28vw] md:mb-4 cursor-pointer relative overflow-hidden"
             onMouseEnter={() => handleMouseEnter(project.id)}
             onMouseLeave={handleMouseLeave}
           >
             {/* Gambar akan dipilih berdasarkan indeks */}
             <img
               src={`/src/assets/${imageLabels[index % imageLabels.length]}.jpg`}
-              className={`lg:w-[24.1rem] h-64 rounded-xl transform transition-transform duration-1000 ${
+              className={`lg:w-[30.3vw] lg:h-64 md:w-[46.4vw] md:h-[27vw] rounded-xl transform transition-transform duration-1000 ${
                 isHovered === project.id
                   ? "scale-110 opacity-75 blur-sm"
                   : "scale-100 opacity-100"

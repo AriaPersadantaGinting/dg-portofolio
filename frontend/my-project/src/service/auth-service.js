@@ -196,6 +196,18 @@ const fetchUpdateSkill = async (skillId, data) => {
   }
 };
 
+const fetchPostContact = async (data, callback) => {
+  try {
+    const response = await axios.post(
+      "http://localhost:3000/api/dg-portofolio/contact-me",
+      data
+    );
+    if (callback) response;
+  } catch (error) {
+    throw new error();
+  }
+};
+
 export default {
   postDataRegister,
   postDataLogin,
@@ -207,4 +219,5 @@ export default {
   fetchCreateSkill,
   fetchAllSkill,
   fetchUpdateSkill,
+  fetchPostContact,
 };

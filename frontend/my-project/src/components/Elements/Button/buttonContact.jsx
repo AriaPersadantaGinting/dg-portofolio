@@ -10,28 +10,28 @@ const ButttonContact = (props) => {
       y: 24,
       opacity: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.1,
       },
     },
     initial: {
       opacity: 1,
       y: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.1,
       },
     },
     animate2: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.1,
       },
     },
     initial2: {
       opacity: 0,
       y: -24,
       transition: {
-        duration: 0.5,
+        duration: 0.1,
       },
     },
     scaleSpan: {
@@ -57,7 +57,7 @@ const ButttonContact = (props) => {
       <motion.div
         whileInView="animate3"
         variants={variants}
-        className={`bg-[#302830] relative w-64 flex justify-around items-center ${styles}  py-6 rounded-xl cursor-pointer`}
+        className={`bg-[#302830] relative  flex justify-around items-center ${styles}  py-6 rounded-xl cursor-pointer`}
         onMouseEnter={() => {
           setIsHovered(true);
         }}
@@ -67,7 +67,7 @@ const ButttonContact = (props) => {
           initial="initial"
           animate={isHovered ? "animate1" : "initial"}
           variants={variants}
-          className={`text-white text-2xl left-[2rem] text-left  relative`}
+          className={`text-white lg:text-[2vw] md:text-[1.8vw] left-[2rem] text-left  relative`}
         >
           Let's Talk
         </motion.button>
@@ -75,7 +75,7 @@ const ButttonContact = (props) => {
           initial="initial"
           animate={isHovered ? "animate2" : "initial2"}
           variants={variants}
-          className={`text-white text-2xl text-left relative -left-[5.11rem]`}
+          className={`text-white lg:text-[2vw] md:text-[1.8vw] relative lg:-left-[4.4rem] md:-left-[3.4rem]`}
         >
           Let's Talk
         </motion.button>
@@ -83,7 +83,7 @@ const ButttonContact = (props) => {
           initial={{ color: "white" }}
           variants={variants}
           animate={isHovered ? "scaleSpan" : ""}
-          className="text-2xl  relative -left-10"
+          className="text-[2vw]  relative -left-[3vw]"
         >
           •
         </motion.span>

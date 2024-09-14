@@ -41,7 +41,7 @@ const MenuSidebar = forwardRef((props, ref) => {
   return (
     <aside
       ref={ref}
-      className="md:w-[18rem] fixed md:right-[2.7rem] top-24 bg-[rgba(61,58,60,0.5)] rounded-xl backdrop-blur-md z-[5000]"
+      className="w-[16.4rem] lg:w-[16.8rem] fixed right-[0.8rem] lg:right-[3.3rem] lg:top-[5.6rem] md:w-[15.8rem] md:right-[2.2rem] md:top-20 sm:w-[15.6rem] sm:right-[1.5rem] sm:top-[5.1rem] top-20 bg-[rgba(61,58,60,0.5)] rounded-xl backdrop-blur-md z-[5000]"
       onClick={handleSidebarClick}
     >
       {["Home", "About", "Project", "Skill", "Contact"].map((label, index) => (

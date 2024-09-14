@@ -16,8 +16,8 @@ const ProjectLayouts = () => {
         <ProjectSection1 />
         <ProjectSection2 />
         <ContactSection
-          styles="top-[105rem]"
-          styles2="top-[114rem]"
+          styles="top-[103.5rem]"
+          styles2="top-[112rem]"
           styles3="mt-[10rem]"
         />
       </main>

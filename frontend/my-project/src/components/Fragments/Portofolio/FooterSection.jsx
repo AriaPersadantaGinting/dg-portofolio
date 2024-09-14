@@ -14,7 +14,7 @@ const FooterSection = (props) => {
   ];
   return (
     <>
-      <footer className={`relative pb-14 ${styles}`}>
+      <footer className={`relative ${styles}`}>
         <div className="flex justify-center">
           {icons.map((icon, index) => (
             <div

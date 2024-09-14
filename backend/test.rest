@@ -39,7 +39,7 @@ Authorization: 31a5b8e2-cd27-4840-a67f-235042da5f14
 DELETE http://localhost:3000/api/dg-portofolio/users/current
 Content-Type: application/json
 Accept: application/json
-Authorization: 2a76d406-2920-40d8-a534-61c678d0c3d4
+Authorization: 3d4b0a43-761c-4976-ab5e-dd75621f0691
 ###
 POST http://localhost:3000/api/dg-portofolio/projects
 Content-Type: application/json

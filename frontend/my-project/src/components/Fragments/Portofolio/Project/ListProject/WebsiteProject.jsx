@@ -21,7 +21,6 @@ const WebsiteProject = (props) => {
     try {
       await authService.fetchAllProject((res) => {
         setProjects(res);
-        console.info(res);
       });
     } catch (error) {
       console.error("Error fetching projects:", error);
