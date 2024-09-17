@@ -17,13 +17,9 @@ const AboutLayouts = () => {
         <AboutSection1 />
         <AboutSection2 />
         <AboutSection3 />
-        <ContactSection
-          styles="top-[193rem]"
-          styles2="top-[202rem]"
-          styles3="mt-[5rem]"
-        />
+        <ContactSection />
+        <FooterSection styles="lg:top-[5rem] md:top-[5rem] sm:top-[5rem] top-[5rem]"></FooterSection>
       </main>
-      <FooterSection styles="-bottom-[122rem]"></FooterSection>
     </>
   );
 };

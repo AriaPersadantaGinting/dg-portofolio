@@ -20,8 +20,8 @@ const ProjectLayouts = () => {
           styles2="top-[112rem]"
           styles3="mt-[10rem]"
         />
+        <FooterSection styles="top-[2.5rem]"></FooterSection>
       </main>
-      <FooterSection styles="-bottom-[33.5rem]"></FooterSection>
     </>
   );
 };

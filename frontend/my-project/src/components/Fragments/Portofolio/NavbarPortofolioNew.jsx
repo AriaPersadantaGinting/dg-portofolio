@@ -132,7 +132,7 @@ const NavbarPortofolioNew = () => {
 
   return (
     <>
-      <nav className="relative flex justify-between items-center w-full px-2 py-4">
+      <nav className="fixed z-[10] flex justify-between items-center w-full px-2 py-4">
         <div className="flex items-center ml-4 lg:ml-10 md:ml-10 sm:ml-10">
           <img
             src="/src/assets/bg11.webp"
@@ -143,12 +143,12 @@ const NavbarPortofolioNew = () => {
             {isMobile ? "DG13" : "Aria Persadanta Ginting"}
           </h1>
         </div>
-        <div className="flex items-center lg:mr-10 md:mr-4 sm:mr-3 py-2 backdrop-blur-sm">
+        <div className="flex items-center lg:mr-10 md:mr-4 sm:mr-3 py-2">
           <motion.div
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             variants={variants}
-            className={`bg-[rgba(61,58,60,0.5)] relative flex w-36 h-12 lg:w-36 lg:h-14 lg:left-[5.3rem] md:w-32 md:h-12 sm:w-32 sm:h-12 rounded-xl  ${
+            className={`bg-[rgba(61,58,60,0.5)] relative flex w-36 h-12 lg:w-36 lg:h-14 lg:left-[5.3rem] md:w-32 md:h-12 sm:w-32 sm:h-12 rounded-xl backdrop-blur-sm  ${
               isHovered
                 ? "bg-gradient-to-r from-[#6c5483] via-[#24639b] to-green-500"
                 : "bg-[rgba(61,58,60,0.5)]"

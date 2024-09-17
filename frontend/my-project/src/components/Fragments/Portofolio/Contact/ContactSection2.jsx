@@ -36,42 +36,37 @@ const ContactSection2 = () => {
   };
   return (
     <>
-      <section className="lg:mb-20 lg:pt-48">
-        <div className="flex text-white ml-12">
-          <div className="flex bg-[rgba(61,58,60,0.5)] lg:w-64 lg:px-2 lg:py-3 lg:rounded-lg lg:text-[14px] lg:ml-4">
+      <section className="py-32">
+        <div className="flex flex-wrap w-full sm:justify-center text-white">
+          <div className="bg-[rgba(61,58,60,0.5)] flex lg:w-[15.5rem] md:w-[15.5rem] md:mb-3 py-3 rounded-xl sm:w-[15.5rem] sm:mb-3 mb-3 ml-2">
             <img
+              className="w-5 h-5 mt-1 lg:ml-6 md:ml-6 sm:ml-6 ml-3 mr-1"
               src="/src/assets/phone.svg"
-              alt="phone"
-              className="lg:w-5 lg:h-5 lg:ml-4 lg:mr-1 lg:mt-1" // Adjust size as needed
-            />{" "}
-            <span className="lg:mt-1">Whatsapp: 6282174100654</span>
+              alt=""
+            />
+            whatsapp: 082168470920
           </div>
-          <div className="flex bg-[rgba(61,58,60,0.5)] lg:w-64 lg:px-2 lg:py-3 lg:rounded-lg lg:text-[14px] lg:ml-4">
+          <div className="bg-[rgba(61,58,60,0.5)] flex lg:w-[15.5rem] lg:ml-2 md:w-[15.5rem] md:mb-3 md:ml-2 sm:w-[15.5rem] sm:mb-3 sm:ml-2 mb-3 w-[14rem] ml-2 py-3 rounded-xl">
             <img
+              className="w-5 h-5 mt-1 lg:ml-8 md:ml-8 sm:ml-8 ml-3  mr-1"
               src="/src/assets/number.svg"
-              alt="phone"
-              className="lg:w-5 lg:h-5 lg:mt-1 lg:ml-4 lg:mr-1" // Adjust size as needed
-            />{" "}
-            <span className="lg:mt-1">Number: 6281398710738</span>
+              alt=""
+            />
+            number: 082168470920
           </div>
-          <div className="flex bg-[rgba(61,58,60,0.5)] lg:w-64 lg:px-2 lg:py-3 lg:rounded-lg lg:text-[14px] lg:ml-4">
+          <div className="bg-[rgba(61,58,60,0.5)] flex lg:w-[19rem] lg:ml-2 md:w-[19rem] ml-2 m:w-[19rem] w-[17.5rem] mb-3 py-3 h-12 rounded-xl">
             <img
+              className="w-5 h-5 mt-1 ml-3 mr-1 md:ml-6 sm:ml-6"
               src="/src/assets/email.svg"
-              alt="email"
-              className="lg:w-5 lg:h-5 lg:mt-0.5 lg:ml-4 lg:mr-1" // Adjust size as needed
-            />{" "}
-            <span className="lg:mt-1 lg:text-[12px]">
-              Email: persadanta13@gmail.com
-            </span>
+              alt=""
+            />
+            email: persadanta13@gmail.com
           </div>
         </div>
         <form onSubmit={handleContact}>
-          <div className="bg-[rgba(61,58,60,0.5)] mt-8 flex flex-wrap w-[68rem] ml-16 pb-10 rounded-xl">
+          <div className="bg-[rgba(61,58,60,0.5)] lg:w-[95vw] lg:mx-[1.3rem] md:w-[95vw] md:mx-[1.1rem] sm:w-[95vw] sm:mx-[0.75rem] w-[92vw] mx-[0.72rem]  mt-8 flex flex-wrap justify-center pb-10 rounded-xl">
             <div className="mt-4">
-              <label
-                htmlFor="name"
-                className="text-white block mb-5 ml-[1.5rem]"
-              >
+              <label htmlFor="name" className="text-white block mb-5 ml-1">
                 Name
               </label>
               <input
@@ -79,11 +74,11 @@ const ContactSection2 = () => {
                 name="name"
                 id="name"
                 placeholder="name..."
-                className="w-[21rem] ml-[1.5rem] mr-4 px-2 py-4 rounded-xl pl-4"
+                className="lg:w-[29vw] lg md:w-[28vw] sm:w-[40vw] sm:mr-2 w-[86vw] px-2 py-4 rounded-xl pl-4"
               ></input>
             </div>
             <div className="mt-4">
-              <label htmlFor="email" className="text-white mb-5 block">
+              <label htmlFor="email" className="text-white ml-1 mb-5 block">
                 Email
               </label>
               <input
@@ -91,34 +86,37 @@ const ContactSection2 = () => {
                 name="email"
                 id="email"
                 placeholder="email..."
-                className=" w-[21rem] pl-4 px-2 py-4 rounded-xl"
+                className="lg:w-[29vw] md:w-[28vw] sm:w-[40vw] w-[86vw] pl-4 px-2 py-4 rounded-xl"
               ></input>
             </div>
             <div className="mt-4">
-              <label htmlFor="subject" className="text-white ml-2 mb-5 block">
+              <label
+                htmlFor="subject"
+                className="text-white sm:ml-4 ml-1 mb-5 block"
+              >
                 Subject
               </label>
               <input
-                type="subject"
+                type="text"
                 name="subject"
                 id="subject"
                 placeholder="subject..."
-                className=" w-[21rem] pl-4 px-2 py-4 ml-4 rounded-xl"
+                className=" lg:w-[29vw] md:w-[28vw] sm:w-[82vw] sm:mx-2  w-[86vw] pl-4 px-2 py-4 rounded-xl"
               ></input>
             </div>
             <div className="">
               <label
                 htmlFor="message"
-                className="text-white ml-[1.5rem] mt-8 mb-5 block"
+                className="text-white lg:ml-[1.5rem] md:ml-[0.7rem] sm:ml-4 ml-1 mt-8 mb-5 block"
               >
                 Message
               </label>
               <input
-                type="message"
+                type="text"
                 name="message"
                 id="message"
                 placeholder="Write Your Message..."
-                className=" w-[65rem] pl-4 px-2 py-12 ml-[1.5rem] rounded-xl"
+                className="lg:w-[89vw] md:w-[87vw] md:mx-[0.5rem] sm:w-[82vw] sm:mx-2 w-[86vw] px-2 h-[8rem] pb-20 rounded-xl"
               ></input>
             </div>
             <motion.div
@@ -128,7 +126,7 @@ const ContactSection2 = () => {
               onClick={() => {}}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="bg-white w-64 px-2 py-4 rounded-xl mt-8 ml-6 flex justify-center cursor-pointer"
+              className="bg-white w-64 px-2 py-4 rounded-xl mt-8   flex justify-center cursor-pointer"
             >
               <motion.button
                 initial={{ color: "#000000" }}
@@ -142,7 +140,7 @@ const ContactSection2 = () => {
               <img
                 src="/src/assets/email2.svg"
                 alt="phone"
-                className="lg:w-5 lg:h-5 lg:ml-2 lg:mt-[7px]" // Adjust size as needed
+                className="lg:w-5 lg:h-5 lg:ml-2 lg:mt-[7px] md:w-5 md:h-5 md:ml-2 md:mt-[7px] sm:w-5 sm:h-5 sm:ml-2 sm:mt-[7px] w-5 h-5 ml-2 mt-[7px]" // Adjust size as needed
               />{" "}
             </motion.div>
           </div>

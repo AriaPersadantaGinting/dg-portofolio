@@ -20,11 +20,16 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Project2 from "./pages/project2";
 import Contact2 from "./pages/contact2";
+import ButttonContact from "./components/Elements/Button/buttonContact";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Navigate to="/home" />,
+  },
+  {
+    path: "/fts",
+    element: <ButttonContact />,
   },
   {
     path: "/home",

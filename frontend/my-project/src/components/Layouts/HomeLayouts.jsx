@@ -14,17 +14,13 @@ const PortofolioLayouts = () => {
       <ScrollToTop></ScrollToTop>
       <LingkaranCursor></LingkaranCursor>
       <NavbarPortofolioNew></NavbarPortofolioNew>
-      <main className="lg:h-[100rem] md:h-[110rem]">
+      <main className="lg:h-[100rem] md:h-[110rem] pb-40">
         <HomeSection></HomeSection>
         <ProjectSection></ProjectSection>
         <SkillSection></SkillSection>
-        <ContactSection
-          styles="lg:top-[2rem] lg:left-[2rem] md:bottom-[17vw] md:left-[4.5vw]"
-          styles2="lg:top-[11rem] lg:left-[5rem] md:bottom-[8vw] md:left-[7.5vw] "
-          styles3="lg:mt-[5rem]"
-        />
+        <ContactSection />
+        <FooterSection />
       </main>
-      <FooterSection styles="lg:-bottom-[71rem] md:-bottom-[125rem] lg:pb-[5rem] md:pb-[6rem]" />
     </>
   );
 };

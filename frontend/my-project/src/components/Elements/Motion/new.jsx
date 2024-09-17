@@ -28,7 +28,7 @@ export default function Skills() {
   ];
 
   return (
-    <div className="lg:w-[85vw] md:w-[50rem] m-auto mt-8 overflow-hidden">
+    <div className="w-[25rem] lg:w-[85vw] md:w-[80vw] sm:w-[35rem] m-auto mt-8 overflow-hidden">
       <Marquee speed={40}>
         <div className="w-full flex flex-nowrap gap-1 md:gap-2 lg:gap-4 mr-1 md:mr-2 lg:mr-4 overflow-hidden">
           {icons.map((icon, index) => (

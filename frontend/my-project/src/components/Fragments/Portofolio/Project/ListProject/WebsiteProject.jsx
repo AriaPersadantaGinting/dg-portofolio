@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import authService from "../../../../../service/auth-service";
 import { motion } from "framer-motion";
 
-const WebsiteProject = (props) => {
-  const { styles } = props;
+const WebsiteProject = () => {
   const [isHovered, setIsHovered] = useState(null);
   const [projects, setProjects] = useState([]);
   const imageLabels = ["bg19", "bg20", "bg21", "bg22", "bg23", "bg24"];
@@ -60,7 +59,7 @@ const WebsiteProject = (props) => {
       initial="skillMotion1"
       whileInView="skillMotion2"
       variants={variants}
-      className={`flex flex-wrap mt-4 transition-opacity duration-[3000ms] ${styles}`}
+      className={`flex flex-wrap justify-center mt-4 transition-opacity duration-[3000ms]`}
     >
       <div className="flex w-full mb-4">
         <h2 className="text-white text-2xl font-indieFLower relative mx-auto tracking-widest">
@@ -68,10 +67,10 @@ const WebsiteProject = (props) => {
         </h2>
       </div>
 
-      <div className="w-full">
+      <div className="w-full flex justify-center">
         <img
           src="/src/assets/arrow.jpg"
-          className="lg:w-16 lg:h-16 ml-[37.7rem] rounded-full"
+          className="lg:w-16 lg:h-16 md:w-20 md:h-20 sm:w-20 sm:h-20 w-20 h-20 rounded-full"
           alt=""
         />
       </div>
@@ -82,14 +81,14 @@ const WebsiteProject = (props) => {
             whileInView="imgEffect"
             variants={variants}
             key={project.id}
-            className="ml-4 mr-4 h-64 mb-8 cursor-pointer relative overflow-hidden"
+            className="mb-8 cursor-pointer relative overflow-hidden"
             onMouseEnter={() => handleMouseEnter(project.id)}
             onMouseLeave={handleMouseLeave}
           >
             {/* Gambar akan dipilih berdasarkan indeks */}
             <img
               src={`/src/assets/${imageLabels[index % imageLabels.length]}.jpg`}
-              className={`lg:w-[24.1rem] h-64 rounded-xl transform transition-transform duration-1000 ${
+              className={`lg:w-[29vw] lg:mx-[1.4rem] lg:h-[25vw] md:w-[42vw] md:mx-[1.4rem]  sm:w-[84vw] sm:mx-[1.4rem] w-[90vw] mx-1   rounded-xl transform transition-transform duration-1000 ${
                 isHovered === project.id
                   ? "scale-110 opacity-75 blur-sm"
                   : "scale-100 opacity-100"

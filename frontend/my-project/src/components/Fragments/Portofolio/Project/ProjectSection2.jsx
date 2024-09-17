@@ -26,8 +26,8 @@ const ProjectSection2 = () => {
   };
   return (
     <>
-      <section className="mb-20 pt-48">
-        <div className="flex ml-[13.5rem] w-[51rem]">
+      <section className="py-48">
+        <div className="flex flex-wrap md:flex-nowrap justify-center items-center lg:w-[80vw] lg:mx-28 md:w-[80vw] md:mx-24 sm:w-[80vw] sm:mx-[4.5rem] w-[85vw] mx-7">
           {["SHOW ALL", "WEBSITE", "ANDROID", "VIDEO", "BLOG"].map(
             (label, index) => (
               <motion.div
@@ -42,9 +42,9 @@ const ProjectSection2 = () => {
                 onMouseLeave={() => handleHoveredLeave()}
                 onClick={() => handleOnClickActive(index)}
                 variants={variants}
-                className="lg:w-36 lg:px-2 lg:py-4 lg:mb-4 lg:ml-4 rounded-xl text-white bg-[rgba(61,58,60,0.5)] text-center raltive cursor-pointer"
+                className="lg:w-36 lg:px-2 lg:py-4 lg:mx-1 md:w-36 md:px-2 md:py-4 md:mx-1 sm:w-36 sm:px-2 sm:py-4 sm:mx-1  w-[10rem] mx-1 my-1 px-2 py-4 rounded-xl text-white bg-[rgba(61,58,60,0.5)] text-center raltive cursor-pointer"
               >
-                <button>{label}</button>
+                <button className="text-[0.8rem]">{label}</button>
                 <span></span>
               </motion.div>
             )

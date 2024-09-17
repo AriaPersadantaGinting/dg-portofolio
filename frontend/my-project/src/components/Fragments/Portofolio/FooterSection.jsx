@@ -14,19 +14,15 @@ const FooterSection = (props) => {
   ];
   return (
     <>
-      <footer className={`relative ${styles}`}>
-        <div className="flex justify-center">
+      <footer className={`flex relative w-full h-14 mt-10 top-20 ${styles}`}>
+        <div className="flex lg:w-[70vw] md:w-[70vw] sm:w-[95vw] w-[90vw] mx-auto items-center justify-center">
           {icons.map((icon, index) => (
-            <div
+            <img
               key={index}
-              className="aspect-square flex items-center justify-center ml-20 mr-4 cursor-pointer"
-            >
-              <img
-                src={icon.src}
-                alt={icon.alt}
-                className="w-[2rem] h-[2rem]" // Adjust size as needed
-              />
-            </div>
+              src={icon.src}
+              alt={icon.alt}
+              className="w-[2rem] h-[2rem] lg:ml-16 lg:mr-16 md:ml-16 md:mr-16  sm:ml-16 sm:mr-16 ml-12 mr-12"
+            />
           ))}
         </div>
       </footer>

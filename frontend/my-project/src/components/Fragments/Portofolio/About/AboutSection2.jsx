@@ -29,24 +29,24 @@ const AboutSection2 = () => {
   return (
     <>
       <section className="flex flex-wrap pb-28 mb-24 overflow-hidden">
-        <div className="lg:w-[28rem] lg:ml-[4rem] lg:mr-20">
+        <div className="lg:ml-[6vw] lg:mr-20 md:ml-[14vw] md:mr-20 md:mb-2 sm:ml-[14vw] sm:mr-20 sm:mb-2 mx-4  mb-4">
           <motion.img
             src="/src/assets/bg12.jpg"
-            initial="initial1"
-            whileInView="animate1"
+            // initial="initial1"
+            // whileInView="animate1"
             variants={variants}
-            className="lg:w-[32rem] lg:h-[36rem] rounded-xl"
+            className="lg:w-[35vw] lg:h-[32rem] md:w-[70vw] md:h-[40rem] sm:w-[70vw] sm:h-[40rem] w-[90vw] h-[35rem]   rounded-xl"
             alt=""
           />
         </div>
-        <div className="lg:w-[38.5rem]">
+        <div className="lg:w-[45vw] lg:ml-8 md:w-[70vw] md:ml-[14vw] sm:w-[70vw] sm:ml-[14vw] sm:pb-4 w-[90vw] ml-[3.5vw]  pb-4">
           <motion.article
-            initial="initial2"
-            whileInView="animate2"
+            // initial="initial2"
+            // whileInView="animate2"
             variants={variants}
-            className="mt-32 text-white lg:text-[1.1rem]"
+            className="lg:mt-32 md:mt-4 md:leading-[1.7rem] text-white lg:text-[1rem]"
           >
-            <h2 className="lg:text-[2.6rem] tracking-tight mb-4 font-suse">
+            <h2 className="lg:text-[2.6rem] md:text-[2.6rem] sm:text-[2.6rem]  text-[2.6rem]  tracking-tight mb-4 font-suse">
               Approach And Philosophy
             </h2>
             <p className="mb-8">

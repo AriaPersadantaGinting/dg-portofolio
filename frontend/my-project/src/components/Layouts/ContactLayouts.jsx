@@ -14,8 +14,8 @@ const ContactLayouts = () => {
       <main className="h-[90rem]">
         <ContactSection1 />
         <ContactSection2 />
+        <FooterSection styles="lg:top-[0.1rem] top-[0.1rem]"></FooterSection>
       </main>
-      <FooterSection styles="-top-[6rem]"></FooterSection>
     </>
   );
 };
