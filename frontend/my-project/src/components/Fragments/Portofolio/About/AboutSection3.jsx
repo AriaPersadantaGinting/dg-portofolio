@@ -1,55 +1,69 @@
-import AboutGraph from "../../../Elements/graph/AboutGraph";
-import { motion } from "framer-motion";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-no-undef */
+import React from "react";
+import { Timeline } from "../../../Elements/ui/timeline";
 
+const data = [
+  {
+    title: "2024",
+    content: (
+      <div>
+        <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          Built and launched Aceternity UI and Aceternity UI Pro from scratch
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "Early 2023",
+    content: (
+      <div>
+        <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          I usually run out of copy, but when I see content this big, I try to
+          integrate lorem ipsum.
+        </p>
+        <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          Lorem ipsum is for people who are too lazy to write copy. But we are
+          not. Here are some more example of beautiful designs I built.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "Changelog",
+    content: (
+      <div>
+        <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+          Deployed 5 new components on Aceternity today
+        </p>
+        <div className="mb-8">
+          <div className="flex gap-2 items-center text-white dark:text-neutral-300 text-xs md:text-sm">
+            ✅ Card grid component
+          </div>
+          <div className="flex gap-2 items-center text-white dark:text-neutral-300 text-xs md:text-sm">
+            ✅ Startup template Aceternity
+          </div>
+          <div className="flex gap-2 items-center text-white dark:text-neutral-300 text-xs md:text-sm">
+            ✅ Random file upload lol
+          </div>
+          <div className="flex gap-2 items-center text-white dark:text-neutral-300 text-xs md:text-sm">
+            ✅ Himesh Reshammiya Music CD
+          </div>
+          <div className="flex gap-2 items-center text-white dark:text-neutral-300 text-xs md:text-sm">
+            ✅ Salman Bhai Fan Club registrations open
+          </div>
+        </div>
+      </div>
+    ),
+  },
+];
 const AboutSection3 = () => {
-  const variants = {
-    initial1: {
-      opacity: 0,
-      scale: 0,
-    },
-    animate1: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 2,
-      },
-    },
-    initial2: {
-      opacity: 0,
-    },
-    animate2: {
-      opacity: 1,
-      transition: {
-        duration: 2,
-      },
-    },
-  };
   return (
     <>
       <section className="flex flex-col pb-28 w-full">
-        <motion.div
-          initial="initial1"
-          whileInView="animate1"
-          variants={variants}
-          className="lg:mx-[5vw] mb-32 lg:w-[88.5vw] md:w-[80vw] md:mx-[9vw] sm:w-[80vw] sm:mx-[9vw] w-[90vw] mx-[3.4vw]"
-        >
-          <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-[#44dddc] via-[#e17bef] to-green-500 lg:text-[5rem] md:text-[3rem] sm:text-[3rem] text-[3rem] mb-4">
-            The Digital Journey
-          </h1>
-          <p className="text-white lg:w-[55vw] lg:text-[1.4rem] md:w-[75vw] md:text-[1.4rem] sm:w-[65vw] sm:text-[1.4rem] text-[1.3rem]">
-            Established history of success in design and development,
-            consistently delivering valuable insights and driving significant
-            results.
-          </p>
-        </motion.div>
-        <motion.div
-          initial="initial2"
-          whileInView="animate2"
-          variants={variants}
-          className="relative"
-        >
-          <AboutGraph></AboutGraph>
-        </motion.div>
+        <div className="w-full bg-black">
+          <Timeline data={data} />
+        </div>
       </section>
     </>
   );

@@ -57,12 +57,12 @@ const AndroidProject = () => {
   return (
     <motion.section
       initial="skillMotion1"
-      whileInView="skillMotion2"
+      animate="skillMotion2"
       variants={variants}
-      className={`flex flex-wrap justify-center mt-4 transition-opacity duration-[3000ms]`}
+      className={`flex flex-wrap relative lg:bottom-72 justify-center mt-4 transition-opacity duration-[3000ms]`}
     >
       <div className="flex w-full mb-4">
-        <h2 className="text-white text-2xl font-indieFLower relative mx-auto tracking-widest">
+        <h2 className="text-2xl font-indieFLower relative mx-auto tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-[#56ab2f] to-[#a8e063]">
           Some Recent Work
         </h2>
       </div>
@@ -81,7 +81,7 @@ const AndroidProject = () => {
             whileInView="imgEffect"
             variants={variants}
             key={project.id}
-            className="mb-8 cursor-pointer relative overflow-hidden  "
+            className="cursor-pointer relative overflow-hidden py-4"
             onMouseEnter={() => handleMouseEnter(project.id)}
             onMouseLeave={handleMouseLeave}
           >
@@ -90,7 +90,7 @@ const AndroidProject = () => {
               src={`/src/assets/${imageLabels[index % imageLabels.length]}.jpg`}
               className={`lg:w-[29vw] lg: lg:h-[25vw] md:w-[42vw] md:mx-[1.4rem] sm:w-[84vw] sm:mx-[1.4rem] w-[90vw] mx-1   rounded-xl transform transition-transform duration-1000 ${
                 isHovered === project.id
-                  ? "scale-110 opacity-75 blur-sm"
+                  ? "scale-110 opacity-75 blur-sm rounded-xl"
                   : "scale-100 opacity-100"
               }`}
               alt={project.title}

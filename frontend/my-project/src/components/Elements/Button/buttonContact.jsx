@@ -66,7 +66,7 @@ const ButttonContact = (props) => {
       >
         <Link
           to="/contact"
-          className="flex absolute justify-center items-center z-[103] lg:w-[15rem] lg:h-[4rem] lg:top-[19rem] lg:left-[39vw] md:w-[15rem] md:h-[4rem] md:left-[36vw] md:top-[20rem] sm:w-[15rem] sm:h-[4rem] sm:left-[30vw] sm:top-[20rem] w-[10rem] h-[3.5rem] left-[30.5vw] top-[26rem]  rounded-xl cursor-pointer bg-[#302830]  "
+          className="flex absolute justify-center items-center lg:w-[16rem] lg:h-[4rem] lg:top-[19rem] lg:left-[39vw] md:w-[15rem] md:h-[4rem] md:left-[36vw] md:top-[20rem] sm:w-[15rem] sm:h-[4rem] sm:left-[33vw] sm:top-[20rem] w-[10rem] h-[3.5rem] left-[32vw] top-[26rem]  rounded-xl cursor-pointer bg-[#302830]  "
         >
           <div>
             <motion.p

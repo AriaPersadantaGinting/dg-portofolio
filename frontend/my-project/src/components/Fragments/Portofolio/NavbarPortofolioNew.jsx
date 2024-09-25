@@ -1,10 +1,12 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect, useRef } from "react";
 import MenuSidebar from "../../Elements/Sidebar/sidebarMenu";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const NavbarPortofolioNew = () => {
+const NavbarPortofolioNew = (props) => {
+  const { style } = props;
   const [isHovered, setIsHovered] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -109,7 +111,7 @@ const NavbarPortofolioNew = () => {
     return isHovered2 ? "open" : "closed";
   };
 
-  const handleButtonClick = () => {
+  const handleButtonClick = async () => {
     setIsOpen((prev) => !prev);
   };
 
@@ -132,33 +134,33 @@ const NavbarPortofolioNew = () => {
 
   return (
     <>
-      <nav className="fixed z-[10] flex justify-between items-center w-full px-2 py-4">
+      <nav className="fixed z-[100] flex justify-between items-center w-full px-2 py-4">
         <div className="flex items-center ml-4 lg:ml-10 md:ml-10 sm:ml-10">
           <img
             src="/src/assets/bg11.webp"
             className="w-8 h-8 lg:w-10 lg:h-10 md:w-8 md:h-8  rounded-md mr-2 lg:mr-2 md:mr-2 sm:mr-2"
             alt=""
           />
-          <h1 className="text-[1.1rem] lg:text-[1.7vw] md:text-[1.7vw] sm:text-[1.7vw] bg-clip-text text-transparent bg-gradient-to-r from-[#44dddc] via-[#e17bef] to-green-500 font-bold">
+          <h1
+            className={`text-[1.1rem] lg:text-[1.7vw] md:text-[1.7vw] sm:text-[1.7vw] bg-clip-text text-transparent ${style}  font-bold`}
+          >
             {isMobile ? "DG13" : "Aria Persadanta Ginting"}
           </h1>
         </div>
         <div className="flex items-center lg:mr-10 md:mr-4 sm:mr-3 py-2">
-          <motion.div
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            variants={variants}
-            className={`bg-[rgba(61,58,60,0.5)] relative flex w-36 h-12 lg:w-36 lg:h-14 lg:left-[5.3rem] md:w-32 md:h-12 sm:w-32 sm:h-12 rounded-xl backdrop-blur-sm  ${
-              isHovered
-                ? "bg-gradient-to-r from-[#6c5483] via-[#24639b] to-green-500"
-                : "bg-[rgba(61,58,60,0.5)]"
-            }`}
-            style={{
-              backgroundColor: isHovered ? "" : "bg-[rgba(61,58,60,0.5)]",
-              backdropFilter: isHovered ? "none" : "blur(4px)",
-            }}
-          >
-            <Link to="/contact">
+          <Link to="/contact">
+            <motion.div
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              variants={variants}
+              className={`bg-[rgba(61,58,60,0.5)] relative flex w-36 h-12 lg:w-36 lg:h-14 lg:left-[5.3rem] md:w-32 md:h-12 sm:w-32 sm:h-12 rounded-xl backdrop-blur-sm  ${
+                isHovered ? style : "bg-[rgba(61,58,60,0.5)]"
+              }`}
+              style={{
+                backgroundColor: isHovered ? "" : "bg-[rgba(61,58,60,0.5)]",
+                backdropFilter: isHovered ? "none" : "blur(4px)",
+              }}
+            >
               <div className="relative">
                 <motion.button
                   initial="noHover"
@@ -179,21 +181,20 @@ const NavbarPortofolioNew = () => {
                   Let's Talk
                 </motion.button>
               </div>
-            </Link>
-
-            <motion.span
-              animate={isHovered ? "hover2" : "noHover2"}
-              variants={variantsButton}
-              transition={{ duration: 0.1 }}
-              className={`relative text-3xl right-4 top-[0.3rem] lg:text-3xl lg:right-5 lg:bottom-4 md:text-3xl md:right-4 md:top-1 sm:text-3xl sm:right-4 sm:top-1 ${
-                isHovered
-                  ? "top-[0.5rem] lg:top-[1.1rem] md:top-[0.6rem] sm:top-2"
-                  : ""
-              }`}
-            >
-              •
-            </motion.span>
-          </motion.div>
+              <motion.span
+                animate={isHovered ? "hover2" : "noHover2"}
+                variants={variantsButton}
+                transition={{ duration: 0.1 }}
+                className={`relative text-3xl right-4 top-[0.3rem] lg:text-3xl lg:right-5 lg:bottom-4 md:text-3xl md:right-4 md:top-1 sm:text-3xl sm:right-4 sm:top-1 ${
+                  isHovered
+                    ? "top-[0.5rem] lg:top-[1.1rem] md:top-[0.6rem] sm:top-2"
+                    : ""
+                }`}
+              >
+                •
+              </motion.span>
+            </motion.div>
+          </Link>
           <motion.div
             animate={getAnimationVariant() || isOpen ? "hover3" : "noHover3"}
             onClick={handleButtonClick}

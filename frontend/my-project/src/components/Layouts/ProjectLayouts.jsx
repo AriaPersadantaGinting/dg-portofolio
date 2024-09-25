@@ -11,16 +11,20 @@ const ProjectLayouts = () => {
     <>
       <ScrollToTop></ScrollToTop>
       <LingkaranCursor></LingkaranCursor>
-      <NavbarPortofolioNew></NavbarPortofolioNew>
+      <NavbarPortofolioNew style="bg-gradient-to-r from-[#56ab2f] to-[#a8e063]"></NavbarPortofolioNew>
       <main className="h-[100rem]">
         <ProjectSection1 />
         <ProjectSection2 />
         <ContactSection
-          styles="top-[103.5rem]"
-          styles2="top-[112rem]"
-          styles3="mt-[10rem]"
+          style="bg-gradient-to-r from-[#56ab2f] to-[#a8e063]"
+          style2="bg-gradient-to-r from-[#a8e063] to-[#56ab2f]"
+          style3="mt-10"
         />
-        <FooterSection styles="top-[2.5rem]"></FooterSection>
+        <FooterSection
+          styles="lg:top-[2.5rem] md:top-[0.5rem] sm:top-[2.5rem] bg-clip-text text-transparent bg-gradient-to-r from-[#002147] to-[black]"
+          styles2="bg-gradient-to-r from-[#56ab2f] to-[#a8e063]"
+          styles3="bg-gradient-to-r from-[#56ab2f] to-[#a8e063]"
+        ></FooterSection>
       </main>
     </>
   );

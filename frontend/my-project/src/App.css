@@ -37,3 +37,26 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* index.css atau file CSS terpisah */
+/* styles.css atau file CSS global Anda */
+.perspective-1000 {
+  perspective: 1000px; /* Menentukan jarak pandang untuk efek 3D */
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d; /* Menyimpan transformasi 3D dari elemen anak */
+}
+
+.backface-hidden {
+  backface-visibility: hidden; /* Menyembunyikan sisi belakang saat card diputar */
+}
+
+.rotateY-180 {
+  transform: rotateY(180deg); /* Memutar card 180 derajat untuk sisi belakang */
+}
+
+html,
+body {
+  /* overflow-y: hidden; */
+}

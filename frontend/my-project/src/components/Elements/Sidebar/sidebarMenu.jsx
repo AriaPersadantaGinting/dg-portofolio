@@ -19,6 +19,12 @@ const variants = {
     x: "-20%", // Posisi teks saat tidak di-hover
     opacity: 1, // Opacity saat tidak di-hover
   },
+  scale1: {
+    scale: [0, 1],
+  },
+  scale2: {
+    scale: [1, 0],
+  },
 };
 
 // eslint-disable-next-line react/display-name
@@ -39,9 +45,13 @@ const MenuSidebar = forwardRef((props, ref) => {
   };
 
   return (
-    <aside
+    <motion.aside
       ref={ref}
-      className="w-[16.4rem] lg:w-[16.8rem] fixed right-[0.8rem] lg:right-[3.3rem] lg:top-[5.6rem] md:w-[15.8rem] md:right-[2.2rem] md:top-20 sm:w-[15.6rem] sm:right-[1.5rem] sm:top-[5.1rem] top-20 bg-[rgba(61,58,60,0.5)] rounded-xl backdrop-blur-md z-[5000]"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.2 }}
+      variants={variants}
+      className="w-[16.4rem] lg:w-[16.8rem] fixed right-[0.8rem] lg:right-[3.3rem] lg:top-[5.6rem] md:w-[15.8rem] md:right-[2.2rem] md:top-20 sm:w-[15.6rem] sm:right-[1.5rem] sm:top-[5.1rem] top-20 bg-[rgba(61,58,60,0.5)] rounded-xl backdrop-blur-md z-[9999]"
       onClick={handleSidebarClick}
     >
       {["Home", "About", "Project", "Skill", "Contact"].map((label, index) => (
@@ -77,7 +87,7 @@ const MenuSidebar = forwardRef((props, ref) => {
           </motion.div>
         </div>
       ))}
-    </aside>
+    </motion.aside>
   );
 });
 

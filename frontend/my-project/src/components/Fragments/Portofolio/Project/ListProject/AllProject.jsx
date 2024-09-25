@@ -27,19 +27,18 @@ const AllProject = () => {
 
   useEffect(() => {
     handleGetAllProject();
-  }, []); // Dependency array to prevent infinite loop
+  }, []);
 
   const variants = {
     imgEffect: {
       opacity: 1,
-      // filter: ["blur(3px)", "blur(2px)", "blur(1px)", "blur(0px)"],
       transition: {
         duration: 2,
         delay: 1,
       },
     },
     skillMotion1: {
-      opacity: 0.5,
+      opacity: 0.3,
       scale: 0.3,
       rotateX: 10,
     },
@@ -54,14 +53,11 @@ const AllProject = () => {
   };
 
   return (
-    <motion.section
-      initial="skillMotion1"
-      whileInView="skillMotion2"
-      variants={variants}
-      className={`flex flex-wrap justify-center mt-4 transition-opacity duration-[3000ms]`}
+    <section
+      className={`flex flex-wrap relative lg:bottom-72 md:bottom-52 sm:bottom-52 bottom-52 justify-center mt-4 transition-opacity duration-[3000ms]`}
     >
       <div className="flex w-full mb-4">
-        <h2 className="text-white text-2xl font-indieFLower relative mx-auto tracking-widest">
+        <h2 className="text-2xl font-indieFLower relative mx-auto tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-[#56ab2f] to-[#a8e063]">
           Some Recent Work
         </h2>
       </div>
@@ -76,20 +72,20 @@ const AllProject = () => {
       {projects.length > 0 ? (
         projects.map((project, index) => (
           <motion.div
-            initial={{ opacity: 0.3 }}
+            initial="skillMotion1"
+            animate="skillMotion2"
             whileInView="imgEffect"
             variants={variants}
             key={project.id}
-            className="mb-8 cursor-pointer relative overflow-hidden"
+            className="cursor-pointer relative overflow-hidden py-4"
             onMouseEnter={() => handleMouseEnter(project.id)}
             onMouseLeave={handleMouseLeave}
           >
-            {/* Gambar akan dipilih berdasarkan indeks */}
             <img
               src={`/src/assets/${imageLabels[index % imageLabels.length]}.jpg`}
-              className={`lg:w-[29vw] lg:mx-[1.4rem] lg:h-[25vw] md:w-[42vw] md:mx-[1.4rem]  sm:w-[84vw] sm:mx-[1.4rem] w-[90vw] mx-1   rounded-xl transform transition-transform duration-1000 ${
+              className={`lg:w-[29vw] lg:mx-[1.4rem] lg:h-[25vw] md:w-[42vw] md:mx-[1.4rem]  sm:w-[84vw] sm:mx-[1.4rem] w-[90vw] mx-1  rounded-xl transform transition-transform duration-1000 ${
                 isHovered === project.id
-                  ? "scale-110 opacity-75 blur-sm"
+                  ? "scale-110 opacity-75 rounded-xl blur-sm"
                   : "scale-100 opacity-100"
               }`}
               alt={project.title}
@@ -112,7 +108,7 @@ const AllProject = () => {
           No projects available
         </div>
       )}
-    </motion.section>
+    </section>
   );
 };
 

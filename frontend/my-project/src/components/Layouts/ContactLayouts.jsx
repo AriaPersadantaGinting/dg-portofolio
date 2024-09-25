@@ -10,11 +10,15 @@ const ContactLayouts = () => {
     <>
       <ScrollToTop></ScrollToTop>
       <LingkaranCursor></LingkaranCursor>
-      <NavbarPortofolioNew></NavbarPortofolioNew>
+      <NavbarPortofolioNew style="bg-gradient-to-r from-[#1CD8D2] via-[#24639b] to-[#93EDC7]"></NavbarPortofolioNew>
       <main className="h-[90rem]">
         <ContactSection1 />
         <ContactSection2 />
-        <FooterSection styles="lg:top-[0.1rem] top-[0.1rem]"></FooterSection>
+        <FooterSection
+          styles="lg:top-[-6rem] md:top-[-2.5rem] sm:top-[-2rem] top-[-2rem] bg-clip-text text-transparent bg-gradient-to-r from-[#f5f5f5] to-[white]"
+          styles2="bg-gradient-to-r from-[#1CD8D2] via-[#24639b]  to-[#93EDC7]"
+          styles3="bg-gradient-to-r from-[#1CD8D2] via-[#24639b]  to-[#93EDC7]"
+        ></FooterSection>
       </main>
     </>
   );

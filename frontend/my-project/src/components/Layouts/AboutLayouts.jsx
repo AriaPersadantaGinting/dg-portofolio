@@ -12,13 +12,22 @@ const AboutLayouts = () => {
     <>
       <ScrollToTop></ScrollToTop>
       <LingkaranCursor></LingkaranCursor>
-      <NavbarPortofolioNew></NavbarPortofolioNew>
+      <NavbarPortofolioNew style="bg-gradient-to-r from-[#F7971E] to-[#FFD200]"></NavbarPortofolioNew>
       <main className="h-[100rem]">
         <AboutSection1 />
         <AboutSection2 />
         <AboutSection3 />
-        <ContactSection />
-        <FooterSection styles="lg:top-[5rem] md:top-[5rem] sm:top-[5rem] top-[5rem]"></FooterSection>
+        <ContactSection
+          style="bg-gradient-to-r from-[#F7971E] to-[#FFD200]"
+          style2="bg-gradient-to-r from-[#FFD200] to-[#F7971E]"
+          style3="top-[15rem]"
+        />
+        <FooterSection
+          styles="lg:top-[17.5rem] md:top-[15.5rem] sm:top-[14rem] top-[15rem]
+          bg-clip-text text-transparent bg-gradient-to-r from-[#002147] to-[black]"
+          styles2="bg-gradient-to-r from-[#F7971E] to-[#FFD200]"
+          styles3="bg-gradient-to-r from-[#F7971E] to-[#FFD200]"
+        ></FooterSection>
       </main>
     </>
   );
