@@ -1,11 +1,20 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+
 const ButttonContact = (props) => {
   const { styles } = props;
   const [isHovered, setIsHovered] = useState(false);
+  const button = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: button,
+    offset: ["start end", "end end"],
+  });
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const variants = {
     animate1: {
       y: 24,
@@ -45,20 +54,13 @@ const ButttonContact = (props) => {
         duration: 0.3,
       },
     },
-    animate3: {
-      opacity: [0, 0.5, 1],
-      scale: [1.2, 1.1, 1],
-      transition: {
-        duration: 2,
-      },
-    },
   };
   return (
     <>
       <motion.div
-        whileInView="animate3"
+        ref={button}
         className={`${styles} overflow-hidden`}
-        variants={variants}
+        style={{ opacity, scale }}
         onMouseEnter={() => {
           setIsHovered(true);
         }}

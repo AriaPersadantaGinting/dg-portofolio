@@ -38,16 +38,16 @@ const AllProject = () => {
       },
     },
     skillMotion1: {
-      opacity: 0.3,
+      opacity: 0.5,
       scale: 0.3,
-      rotateX: 10,
+      rotateX: 5,
     },
     skillMotion2: {
       opacity: 1,
       scale: 1,
       rotateX: 0,
       transition: {
-        duration: 2,
+        duration: 1.5,
       },
     },
   };

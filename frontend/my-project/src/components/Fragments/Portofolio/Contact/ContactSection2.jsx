@@ -111,13 +111,13 @@ const ContactSection2 = () => {
               >
                 Message
               </label>
-              <input
+              <textarea
                 type="text"
                 name="message"
                 id="message"
                 placeholder="Write Your Message..."
                 className="lg:w-[89vw] md:w-[87vw] md:mx-[0.5rem] sm:w-[82vw] sm:mx-2 w-[86vw] px-2 h-[8rem] pb-20 rounded-xl"
-              ></input>
+              ></textarea>
             </div>
             <motion.div
               initial={{ background: "#ffffff" }}

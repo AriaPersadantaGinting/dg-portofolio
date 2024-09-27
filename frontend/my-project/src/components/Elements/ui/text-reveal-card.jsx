@@ -68,7 +68,11 @@ export const TextRevealCard = ({
       className={cn("bg-black rounded-lg relative overflow-hidden", style2)}
     >
       {children}
-      <div className={`${style3}  relative flex items-center overflow-hidden`}>
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1, transition: { duration: 2 } }}
+        className={`${style3}  relative flex items-center overflow-hidden`}
+      >
         <motion.div
           style={{
             width: "100%",
@@ -109,7 +113,7 @@ export const TextRevealCard = ({
           <p className={style}>{text}</p>
           <MemoizedStars />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

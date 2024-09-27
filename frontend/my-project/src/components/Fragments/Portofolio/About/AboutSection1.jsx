@@ -3,43 +3,25 @@ import { TextRevealCard } from "../../../Elements/ui/text-reveal-card";
 
 const AboutSection1 = () => {
   const variants = {
-    initial: {
-      x: -100,
-      scale: 0,
-      opacity: 0,
-    },
-    animate1: {
-      x: 0,
-      scale: 1,
-      opacity: 1,
-      transition: {
-        duration: 2,
-      },
-    },
     initial2: {
-      x: 300,
       opacity: 0,
       scale: 2,
-      // delay: 1,
     },
     animate2: {
-      x: 0,
       scale: 1,
       opacity: 1,
       transition: {
         duration: 2,
-        delay: 1,
+        delay: 0.5,
       },
     },
     initial3: {
       opacity: 0,
-      scale: 0,
     },
     animate3: {
       opacity: 1,
-      scale: 1,
       transition: {
-        duration: 1,
+        duration: 2.5,
       },
     },
     initial4: {
@@ -64,7 +46,10 @@ const AboutSection1 = () => {
   return (
     <>
       <section className="flex flex-col mb-64 overflow-hidden">
-        <div className="lg:w-[90vw] md:w-[70vw] sm:w-[60vw] w-[90vw] mx-auto mt-[5rem] mb-8">
+        <motion.div
+          variants={variants}
+          className="lg:w-[90vw] md:w-[70vw] sm:w-[60vw] w-[90vw] mx-auto mt-[5rem] mb-8"
+        >
           <TextRevealCard
             text="Creating Visually Striking Web and Android Experiences that
             Captivate and Engage."
@@ -75,7 +60,7 @@ const AboutSection1 = () => {
             style2="w-[90vw] lg:ml-8 lg:p-2 md:-ml-20 sm:-ml-24"
             style3="lg:h-80"
           ></TextRevealCard>
-        </div>
+        </motion.div>
         <div className="lg:w-[58vw] md:w-[70vw] sm:w-[90vw] w-[90.5vw] lg:ml-[8vw] md:ml-[6.6vw] sm:ml-[6.7vw] ml-4 mb-24">
           <motion.p
             initial="initial2"
@@ -91,7 +76,7 @@ const AboutSection1 = () => {
         </div>
         <motion.div
           initial="initial3"
-          whileInView="animate3"
+          animate="animate3"
           variants={variants}
           className="flex flex-wrap mx-auto lg:w-[95vw] md:w-[70vw] sm:w-[70vw] w-[90vw] "
         >

@@ -28,12 +28,10 @@ const VideoProject = () => {
 
   useEffect(() => {
     handleGetAllProject();
-  }, []); // Dependency array to prevent infinite loop
-
+  }, []);
   const variants = {
     imgEffect: {
       opacity: 1,
-      // filter: ["blur(3px)", "blur(2px)", "blur(1px)", "blur(0px)"],
       transition: {
         duration: 2,
         delay: 1,
@@ -42,24 +40,21 @@ const VideoProject = () => {
     skillMotion1: {
       opacity: 0.5,
       scale: 0.3,
-      rotateX: 10,
+      rotateX: 5,
     },
     skillMotion2: {
       opacity: 1,
       scale: 1,
       rotateX: 0,
       transition: {
-        duration: 2,
+        duration: 1.5,
       },
     },
   };
 
   return (
-    <motion.section
-      initial="skillMotion1"
-      animate="skillMotion2"
-      variants={variants}
-      className={`flex flex-wrap relative lg:bottom-72 justify-center mt-4 transition-opacity duration-[3000ms]`}
+    <section
+      className={`flex flex-wrap relative lg:bottom-72 md:bottom-52 sm:bottom-52 bottom-52 justify-center mt-4 transition-opacity duration-[3000ms]`}
     >
       <div className="flex w-full mb-4">
         <h2 className="text-2xl font-indieFLower relative mx-auto tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-[#56ab2f] to-[#a8e063]">
@@ -77,7 +72,8 @@ const VideoProject = () => {
       {projects.length > 0 ? (
         projects.map((project, index) => (
           <motion.div
-            initial={{ opacity: 0.3 }}
+            initial="skillMotion1"
+            animate="skillMotion2"
             whileInView="imgEffect"
             variants={variants}
             key={project.id}
@@ -113,7 +109,7 @@ const VideoProject = () => {
           No projects available
         </div>
       )}
-    </motion.section>
+    </section>
   );
 };
 

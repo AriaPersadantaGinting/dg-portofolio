@@ -9,7 +9,10 @@ const data = [
     content: (
       <div>
         <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit quam
+          officia nostrum nulla a cupiditate ratione. Voluptatibus rerum
+          praesentium atque, impedit eveniet eos. Quo debitis cupiditate, ad
+          soluta voluptates accusamus?
         </p>
       </div>
     ),
@@ -19,8 +22,9 @@ const data = [
     content: (
       <div>
         <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          I usually run out of copy, but when I see content this big, I try to
-          integrate lorem ipsum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ut
+          voluptatum id aperiam quisquam, nam atque saepe, provident odit sequi
+          nesciunt recusandae ducimus fugiat soluta?
         </p>
         <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
           Lorem ipsum is for people who are too lazy to write copy. But we are
@@ -33,26 +37,15 @@ const data = [
     title: "Changelog",
     content: (
       <div>
-        <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-          Deployed 5 new components on Aceternity today
+        <p className="text-neutral-300 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+          ratione officia neque quia nesciunt vero, asperiores atque enim ipsum,
+          sed adipisci magni consectetur odio reiciendis recusandae ullam iure
+          eius similique. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Architecto, vitae laboriosam cumque, eveniet ratione sed
+          voluptatem non suscipit aut laborum, unde ad. Numquam tenetur,
+          repudiandae reiciendis deserunt quisquam nemo at.
         </p>
-        <div className="mb-8">
-          <div className="flex gap-2 items-center text-white dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Card grid component
-          </div>
-          <div className="flex gap-2 items-center text-white dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Startup template Aceternity
-          </div>
-          <div className="flex gap-2 items-center text-white dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Random file upload lol
-          </div>
-          <div className="flex gap-2 items-center text-white dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Himesh Reshammiya Music CD
-          </div>
-          <div className="flex gap-2 items-center text-white dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Salman Bhai Fan Club registrations open
-          </div>
-        </div>
       </div>
     ),
   },
@@ -60,7 +53,7 @@ const data = [
 const AboutSection3 = () => {
   return (
     <>
-      <section className="flex flex-col pb-28 w-full">
+      <section className="flex flex-col w-full">
         <div className="w-full bg-black">
           <Timeline data={data} />
         </div>

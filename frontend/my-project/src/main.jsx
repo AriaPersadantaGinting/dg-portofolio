@@ -25,30 +25,30 @@ import SkillSection3 from "./components/Fragments/Portofolio/Skill/SkillSection3
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/home" />,
+    element: <Navigate to="/welcome" />,
   },
   {
     path: "/fts",
     element: <SkillSection3 />,
   },
   {
-    path: "/home",
+    path: "/welcome",
     element: <Home></Home>,
   },
   {
-    path: "/about",
+    path: "/profile",
     element: <About />,
   },
   {
-    path: "/project",
+    path: "/creation",
     element: <Project2 />,
   },
   {
-    path: "/skill",
+    path: "/expertise",
     element: <SkillLayouts />,
   },
   {
-    path: "/contact",
+    path: "/Connect",
     element: <Contact2 />,
   },
   {

@@ -7,13 +7,10 @@ import { useRef } from "react";
 const ContactSection = (props) => {
   const { style, style2, style3 } = props;
   const contact1 = useRef(null);
-  // const { scrollYProgress } = useScroll();
   const { scrollYProgress } = useScroll({
     target: contact1,
     offset: ["start end", "end end"],
   });
-
-  // Transformasi berdasarkan scroll progress
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const x = useTransform(scrollYProgress, [0, 1], ["-60vw", "0vw"]);
   const perspective = useTransform(scrollYProgress, [0, 1], [0, 1000]);

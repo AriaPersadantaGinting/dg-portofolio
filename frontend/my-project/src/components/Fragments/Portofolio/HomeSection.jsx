@@ -123,22 +123,14 @@ const HomeSection = () => {
         type: "spring",
         stiffness: 100,
         damping: 10,
-      },
-    },
-    btnEffect: {
-      opacity: 1,
-      transition: {
-        duration: 5,
-        // ease: "easeInOut",
-        // type: "spring",
-        // stiffness: 100,
-        // damping: 10,
+        delay: 1,
+        duration: 2,
       },
     },
     imgEffect: {
       opacity: 1,
       transition: {
-        duration: 5,
+        duration: 10,
       },
     },
   };
@@ -155,8 +147,8 @@ const HomeSection = () => {
           words={words}
         />
         <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={"pEffect"}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={"pEffect"}
           variants={variants}
           className="text-[#ffff] ml-14 mr-14 text-[1.2rem]
            lg:text-[1.2rem] md:ml-8 md:text-[1.3rem] mb-6 tracking-widest"
@@ -165,11 +157,18 @@ const HomeSection = () => {
           passion for blending design and technology. I craft engaging and
           functional websites that bring your digital vision to life.
         </motion.p>
-        <div className="flex lg:ml-[2.4vw] md:ml-[3vw] sm:ml-[8vw] ml-[12vw]  text-center lg:w-[55vw] md:w-[60vw] sm:w-[65vw] w-[70vw] mx-auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 1, delay: 3.5 },
+          }}
+          className="flex lg:ml-[2.4vw] md:ml-[3vw] sm:ml-[8vw] ml-[12vw]  text-center lg:w-[55vw] md:w-[60vw] sm:w-[65vw] w-[70vw] mx-auto"
+        >
           <HoverBorderGradient>
             <span>Download CV</span>
           </HoverBorderGradient>
-        </div>
+        </motion.div>
       </div>
       <motion.div
         initial={{ opacity: 0 }}

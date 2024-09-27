@@ -148,7 +148,7 @@ const NavbarPortofolioNew = (props) => {
           </h1>
         </div>
         <div className="flex items-center lg:mr-10 md:mr-4 sm:mr-3 py-2">
-          <Link to="/contact">
+          <Link to="/connect">
             <motion.div
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}

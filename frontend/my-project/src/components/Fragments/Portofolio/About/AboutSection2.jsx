@@ -32,8 +32,8 @@ const AboutSection2 = () => {
         <div className="lg:ml-[6vw] lg:mr-20 md:ml-[14vw] md:mr-20 md:mb-2 sm:ml-[14vw] sm:mr-20 sm:mb-2 mx-4  mb-4">
           <motion.img
             src="/src/assets/bg12.jpg"
-            // initial="initial1"
-            // whileInView="animate1"
+            initial="initial1"
+            whileInView="animate1"
             variants={variants}
             className="lg:w-[35vw] lg:h-[32rem] md:w-[70vw] md:h-[40rem] sm:w-[70vw] sm:h-[40rem] w-[87vw] ml-2 h-[35rem]   rounded-xl"
             alt=""
@@ -41,6 +41,8 @@ const AboutSection2 = () => {
         </div>
         <div className="lg:w-[45vw] lg:ml-8 md:w-[70vw] md:ml-[14vw] sm:w-[70vw] sm:ml-[14vw] sm:pb-4 w-[90vw] ml-[3.5vw]  pb-4">
           <motion.article
+            initial="initial2"
+            whileInView="animate2"
             variants={variants}
             className="lg:mt-20 md:mt-4 md:leading-[1.7rem] text-white lg:text-[1rem] ml-2"
           >
@@ -48,18 +50,20 @@ const AboutSection2 = () => {
               Approach And Philosophy
             </h2>
             <p className="mb-8">
-              I wonder if I've been changed in the night? Let me think. Was I
-              the same when I got up this morning? I almost think I can remember
-              feeling a little different. But if I'm not the same, the next
-              question is 'Who in the world am I?' Ah, that's the great puzzle!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              error mollitia provident doloribus quidem voluptatem aliquam nobis
+              nam, magnam labore perferendis dolores voluptas non rem velit, vel
+              tempore nemo quod? dolores voluptas non rem velit, vel
             </p>
             <p>
-              In 2014, Steven Smith have gotten so much of our time back that
-              we're now able to put towards things that are actually helping our
-              company as opposed to just throwing content out there. and the
-              idea of Lexend was born. Today, Lexend empowers teams to easily
-              communicate with customers through personalized documents that can
-              be created in minutes, build meaningful relationships.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui,
+              dicta autem ut minima voluptatibus earum nemo. Laboriosam
+              explicabo pariatur in deleniti ab dicta suscipit alias, sit,
+              adipisci possimus impedit qui. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Error at fugit dignissimos sapiente
+              voluptate ipsa doloremque. Impedit iste debitis eum cupiditate
+              modi natus, nihil est! Consequuntur reprehenderit impedit debitis
+              dolor?
             </p>
           </motion.article>
         </div>
