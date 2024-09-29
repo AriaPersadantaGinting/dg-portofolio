@@ -1,6 +1,7 @@
 import LingkaranCursor from "../Elements/Cursor/lingkaran";
 import LoadingScreen from "../Elements/Loading/Home-Loading";
 import ScrollToTop from "../Elements/Scroll";
+import CircleScroll from "../Elements/Scroll/CircleScroll";
 import ContactSection from "../Fragments/Portofolio/ContactSection";
 import FooterSection from "../Fragments/Portofolio/FooterSection";
 import HomeSection from "../Fragments/Portofolio/HomeSection";
@@ -15,6 +16,7 @@ const PortofolioLayouts = () => {
       <LingkaranCursor></LingkaranCursor>
       <NavbarPortofolioNew style="bg-gradient-to-r from-[#7303c0] to-[#fdeff9]"></NavbarPortofolioNew>
       <main className="lg:h-[100rem] md:h-[110rem] sm:h-[110rem] h-[100rem] pb-64">
+        <CircleScroll style="text-[#7303c0]" />
         <LoadingScreen />
         <HomeSection></HomeSection>
         <ProjectSection></ProjectSection>

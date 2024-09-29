@@ -44,10 +44,10 @@ function LoadingScreen() {
       },
     },
     animate4: {
-      x: "-100vw",
+      y: "-100vw",
       opacity: 0,
       transition: {
-        delay: 0.3,
+        delay: 0.2,
         duration: 1,
       },
     },
@@ -119,7 +119,7 @@ function LoadingScreen() {
         initial={{ opacity: 1 }}
         animate={count === 100 ? "animate4" : ""}
         variants={variants}
-        className="absolute text-black font-Protest text-9xl top-[16rem]  left-[13rem] "
+        className="absolute text-black font-Protest lg:text-9xl md:text-8xl sm:text-[11vw] text-6xl top-[16rem]  lg:left-[16.5vw] md:left-[20vw] sm:left-[15vw] left-[12vw] "
       >{`Loading ${count}%`}</motion.h1>
     </motion.aside>
   );

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
-const SkillSection2 = (props) => {
-  const { style } = props;
+const SkillSection2 = () => {
   const levelSkill = [
     {
       level: "Beginner",
@@ -21,9 +20,9 @@ const SkillSection2 = (props) => {
       style2:
         "relative bg-[#3a86ff] lg:right-[1rem] md:right-[1.5rem] sm:right-[2rem] right-[1.5rem] rounded-full",
       style3:
-        "relative bg-[#3a86ff] lg:left-2 md:left-4 sm:left-6 left-4 rounded-full",
+        "relative bg-[#3a86ff] lg:left-2 md:left-[1.15rem] sm:left-6 left-4 rounded-full",
       style4:
-        "relative bg-[#3a86ff] lg:-left-[0.75rem] md:right-[0.25rem] sm:left-[0.25rem] right-[0.25rem]  rounded-full",
+        "relative bg-[#3a86ff] lg:-left-[0.75rem] md:-left-[0.1rem] sm:left-[0.25rem] right-[0.25rem]  rounded-full",
     },
     {
       level: "Advanced",

@@ -1,6 +1,7 @@
 import LingkaranCursor from "../Elements/Cursor/lingkaran";
 import LoadingScreen from "../Elements/Loading/Home-Loading";
 import ScrollToTop from "../Elements/Scroll";
+import CircleScroll from "../Elements/Scroll/CircleScroll";
 import ContactSection1 from "../Fragments/Portofolio/Contact/ContactSection1";
 import ContactSection2 from "../Fragments/Portofolio/Contact/ContactSection2";
 import FooterSection from "../Fragments/Portofolio/FooterSection";
@@ -13,6 +14,7 @@ const ContactLayouts = () => {
       <LingkaranCursor></LingkaranCursor>
       <NavbarPortofolioNew style="bg-gradient-to-r from-[#1CD8D2]  to-[#93EDC7]"></NavbarPortofolioNew>
       <main className="h-[90rem]">
+        <CircleScroll style="text-[#1CD8D2]" />
         <LoadingScreen />
         <ContactSection1 />
         <ContactSection2 />

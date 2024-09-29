@@ -37,7 +37,7 @@ const LingkaranCursor = () => {
       animate={{
         opacity: hovering ? 0 : 1,
         scale: hovering ? 1.6 : 1,
-        transition: { duration: 0.2 },
+        transition: { duration: 0.3 },
       }}
       className="fixed w-14 h-14 z-[10000] border-4 border-[#d4d1d3] rounded-full bg-transparent bg-opacity-50 pointer-events-none"
       style={{

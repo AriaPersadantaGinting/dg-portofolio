@@ -28,7 +28,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/fts",
-    // element: <HomeLoading />,
+    // element: <CircleScroll />,
   },
   {
     path: "/welcome",

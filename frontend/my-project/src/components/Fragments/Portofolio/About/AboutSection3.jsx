@@ -53,7 +53,7 @@ const data = [
 const AboutSection3 = () => {
   return (
     <>
-      <section className="flex flex-col w-full">
+      <section className="flex flex-col w-full lg:mt-0 md:mt-0 sm:mt-0  mt-[80rem]">
         <div className="w-full bg-black">
           <Timeline data={data} />
         </div>

@@ -1,24 +1,6 @@
 "use client";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 export function TypewriterEffectSmoothDemo() {
-  // const words = [
-  //   {
-  //     text: "Build",
-  //   },
-  //   {
-  //     text: "awesome",
-  //   },
-  //   {
-  //     text: "apps",
-  //   },
-  //   {
-  //     text: "with",
-  //   },
-  //   {
-  //     text: "Aceternity.",
-  //     className: "text-blue-500 dark:text-blue-500",
-  //   },
-  // ];
   const words = [
     {
       text: "Hi,",
@@ -83,34 +65,6 @@ export function TypewriterEffectSmoothDemo() {
     {
       text: "and ",
     },
-    // {
-    //   text: "functional ",
-    // },
-    // {
-    //   text: "websites ",
-    // },
-    // {
-    //   text: "that ",
-    // },
-    // {
-    //   text: "bring ",
-    // },
-    // {
-    //   text: "your ",
-    // },
-    // {
-    //   text: "digital ",
-    // },
-    // {
-    //   text: "vision ",
-    // },
-    // {
-    //   text: "to ",
-    // },
-    // {
-    //   text: "life. ",
-    //   className: "text-blue-500 dark:text-blue-500",
-    // },
   ];
 
   return (

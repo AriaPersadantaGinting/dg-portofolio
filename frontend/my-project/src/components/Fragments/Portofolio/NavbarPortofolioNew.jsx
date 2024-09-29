@@ -146,6 +146,7 @@ const NavbarPortofolioNew = (props) => {
             alt=""
           />
           <h1
+            id="btn"
             className={`text-[1.1rem] lg:text-[1.7vw] md:text-[1.7vw] sm:text-[1.7vw] bg-clip-text text-transparent ${style}  font-bold`}
           >
             {isMobile ? "DG13" : "Aria Persadanta Ginting"}
@@ -231,6 +232,7 @@ const NavbarPortofolioNew = (props) => {
               </motion.button>
             </div>
             <motion.span
+              id="btn"
               initial="noHover5"
               animate={isHovered2 ? "hover5" : "noHover5"}
               variants={variantsButton}

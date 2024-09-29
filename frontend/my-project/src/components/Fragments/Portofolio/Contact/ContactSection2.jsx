@@ -18,13 +18,15 @@ const ContactSection2 = () => {
       subject: event.target.subject.value,
       message: event.target.message.value,
     };
-    try {
-      await authService.fetchPostContact(data, (status, res) => {
-        if (status) res.data.data;
-      });
-    } catch (error) {
-      throw new error();
-    }
+
+    await authService.fetchPostContact(data, (status, res) => {
+      if (status) {
+        res;
+        window.location.href = "/connect";
+      } else {
+        console.info(res);
+      }
+    });
   };
   const variants = {
     animate1: {
