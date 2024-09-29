@@ -55,8 +55,3 @@ html {
 .rotateY-180 {
   transform: rotateY(180deg); /* Memutar card 180 derajat untuk sisi belakang */
 }
-
-html,
-body {
-  /* overflow-y: hidden; */
-}

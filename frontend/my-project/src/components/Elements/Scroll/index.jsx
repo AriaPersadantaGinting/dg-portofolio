@@ -3,12 +3,9 @@ import { useLocation } from "react-router-dom";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll ke bagian atas halaman
-  }, [pathname]); // Setiap kali pathname berubah, scroll ke atas
-
-  return null; // Tidak merender apapun
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
 }
-
 export default ScrollToTop;

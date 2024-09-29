@@ -12,7 +12,7 @@ const AboutSection1 = () => {
       opacity: 1,
       transition: {
         duration: 2,
-        delay: 0.5,
+        delay: 2,
       },
     },
     initial3: {
@@ -21,6 +21,7 @@ const AboutSection1 = () => {
     animate3: {
       opacity: 1,
       transition: {
+        delay: 2,
         duration: 2.5,
       },
     },

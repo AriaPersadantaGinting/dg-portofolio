@@ -6,8 +6,6 @@ import ColorChangingCursor from "../Elements/Cursor";
 
 const AuthLayouts = (props) => {
   const { title = "default", children, type } = props;
-
-  // Mengatur background image berdasarkan type
   const backgroundImage =
     type === "register"
       ? `url('/src/assets/bg1.jpg')`

@@ -1,9 +1,9 @@
 import LingkaranCursor from "../Elements/Cursor/lingkaran";
+import LoadingScreen from "../Elements/Loading/Home-Loading";
 import ScrollToTop from "../Elements/Scroll";
 import ContactSection from "../Fragments/Portofolio/ContactSection";
 import FooterSection from "../Fragments/Portofolio/FooterSection";
 import HomeSection from "../Fragments/Portofolio/HomeSection";
-// import NavbarPortofolio from "../Fragments/Portofolio/NavbarPortofolio";
 import NavbarPortofolioNew from "../Fragments/Portofolio/NavbarPortofolioNew";
 import ProjectSection from "../Fragments/Portofolio/ProjectSection";
 import SkillSection from "../Fragments/Portofolio/SkillSection";
@@ -15,6 +15,7 @@ const PortofolioLayouts = () => {
       <LingkaranCursor></LingkaranCursor>
       <NavbarPortofolioNew style="bg-gradient-to-r from-[#7303c0] to-[#fdeff9]"></NavbarPortofolioNew>
       <main className="lg:h-[100rem] md:h-[110rem] sm:h-[110rem] h-[100rem] pb-64">
+        <LoadingScreen />
         <HomeSection></HomeSection>
         <ProjectSection></ProjectSection>
         <SkillSection></SkillSection>
@@ -27,7 +28,7 @@ const PortofolioLayouts = () => {
           styles="lg:top-[-3rem] md:top-[-5rem] sm:top-[-5rem] bg-clip-text text-transparent bg-gradient-to-r from-[#002147] to-[black]"
           styles2="bg-gradient-to-r from-[#7303c0] to-[#fdeff9]"
           styles3="bg-gradient-to-r from-[#7303c0] to-[#fdeff9]"
-        />
+        />{" "}
       </main>
     </>
   );

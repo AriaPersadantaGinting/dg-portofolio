@@ -57,12 +57,14 @@ const MenuSidebar = forwardRef((props, ref) => {
       {["Welcome", "Profile", "Creation", "Expertise", "Connect"].map(
         (label, index) => (
           <div
+            id="btn"
             key={index}
             className="h-14 flex justify-start items-center"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
             <motion.span
+              id="btn"
               variants={variants}
               initial="noHover"
               animate={isHover === index ? "hover" : "noHover"}
@@ -72,6 +74,7 @@ const MenuSidebar = forwardRef((props, ref) => {
               →
             </motion.span>
             <motion.div
+              id="btn"
               variants={variants}
               initial="noHover1"
               animate={isHover === index ? "hover1" : "noHover1"}

@@ -19,7 +19,6 @@ const ProjectSection = () => {
     try {
       await authService.fetchAllProject((res) => {
         setProjects(res);
-        console.info(res);
       });
     } catch (error) {
       console.error("Error fetching projects:", error);
@@ -54,7 +53,7 @@ const ProjectSection = () => {
   };
 
   return (
-    <motion
+    <motion.section
       className={`flex flex-wrap justify-center lg:mt-44 md:mt-44 sm:mt-32 mt-32 transition-opacity duration-[3000ms]`}
     >
       <div className="flex w-[100vw] mb-4">
@@ -110,7 +109,7 @@ const ProjectSection = () => {
           No projects available
         </div>
       )}
-    </motion>
+    </motion.section>
   );
 };
 

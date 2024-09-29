@@ -17,16 +17,16 @@ const NavbarPortofolioNew = (props) => {
 
   const variants = {
     hover: {
-      backgroundColor: "#6c5483",
+      backgroundColor: "rgb(108, 84, 131)",
     },
     noHover: {
-      backgroundColor: "#334155",
+      backgroundColor: "rgb(51, 65, 85)",
     },
     open: {
-      backgroundColor: "#6c5483",
+      backgroundColor: "rgb(108, 84, 131)",
     },
     closed: {
-      backgroundColor: "#334155",
+      backgroundColor: "rgb(51, 65, 85)",
     },
   };
 
@@ -93,14 +93,14 @@ const NavbarPortofolioNew = (props) => {
     },
     hover5: {
       scale: 2.5,
-      color: "#334155",
+      color: "rgb(51, 65, 85)",
       filter: "blur(2px)",
       y: "-25%",
     },
     noHover5: {
       y: "-8%",
       scale: 1,
-      color: "black",
+      color: "rgb(0, 0, 0)",
     },
   };
 
@@ -135,8 +135,12 @@ const NavbarPortofolioNew = (props) => {
   return (
     <>
       <nav className="fixed z-[100] flex justify-between items-center w-full px-2 py-4">
-        <div className="flex items-center ml-4 lg:ml-10 md:ml-10 sm:ml-10">
+        <div
+          id="btn"
+          className="flex items-center ml-4 lg:ml-10 md:ml-10 sm:ml-10"
+        >
           <img
+            id="btn"
             src="/src/assets/bg11.webp"
             className="w-8 h-8 lg:w-10 lg:h-10 md:w-8 md:h-8  rounded-md mr-2 lg:mr-2 md:mr-2 sm:mr-2"
             alt=""
@@ -150,6 +154,7 @@ const NavbarPortofolioNew = (props) => {
         <div className="flex items-center lg:mr-10 md:mr-4 sm:mr-3 py-2">
           <Link to="/connect">
             <motion.div
+              id="btn"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               variants={variants}
@@ -163,6 +168,7 @@ const NavbarPortofolioNew = (props) => {
             >
               <div className="relative">
                 <motion.button
+                  id="btn"
                   initial="noHover"
                   animate={isHovered ? "hover" : "noHover"}
                   variants={variantsButton}
@@ -182,6 +188,7 @@ const NavbarPortofolioNew = (props) => {
                 </motion.button>
               </div>
               <motion.span
+                id="btn"
                 animate={isHovered ? "hover2" : "noHover2"}
                 variants={variantsButton}
                 transition={{ duration: 0.1 }}
@@ -206,6 +213,7 @@ const NavbarPortofolioNew = (props) => {
           >
             <div className="relative">
               <motion.button
+                id="btn"
                 animate={isHovered2 ? "hover3" : "noHover3"}
                 variants={variantsButton}
                 transition={{ duration: 0.1 }}

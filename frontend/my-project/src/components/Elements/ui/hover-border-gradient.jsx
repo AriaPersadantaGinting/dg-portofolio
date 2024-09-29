@@ -58,6 +58,7 @@ export function HoverBorderGradient({
       {...props}
     >
       <div
+        id="btn"
         className={cn(
           "w-auto text-white z-10 bg-black px-10 py-3 rounded-[inherit]",
           className

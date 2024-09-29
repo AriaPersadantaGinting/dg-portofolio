@@ -3,10 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 const UseAuth = () => {
   const navigate = useNavigate();
-
   useEffect(() => {
-    navigate("/login"); // Ganti '/login' dengan route halaman login Anda
+    navigate("/login");
   }, [navigate]);
 };
-
 export default UseAuth;

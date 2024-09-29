@@ -23,7 +23,7 @@ const ProjectSection2 = () => {
   const variants = {
     animate: {
       background: "linear-gradient(to right, #56ab2f,#a8e063)",
-      color: "black",
+      color: "rgb(0, 0, 0)",
     },
   };
   return (

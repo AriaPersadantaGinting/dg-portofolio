@@ -1,4 +1,5 @@
 import LingkaranCursor from "../Elements/Cursor/lingkaran";
+import LoadingScreen from "../Elements/Loading/Home-Loading";
 import ScrollToTop from "../Elements/Scroll";
 import AboutSection1 from "../Fragments/Portofolio/About/AboutSection1";
 import AboutSection2 from "../Fragments/Portofolio/About/AboutSection2";
@@ -14,6 +15,7 @@ const AboutLayouts = () => {
       <LingkaranCursor></LingkaranCursor>
       <NavbarPortofolioNew style="bg-gradient-to-r from-[#F7971E] to-[#FFD200]"></NavbarPortofolioNew>
       <main className="h-[100rem]">
+        <LoadingScreen />
         <AboutSection1 />
         <AboutSection2 />
         <AboutSection3 />

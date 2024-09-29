@@ -5,7 +5,6 @@ function ColorChangingCursor() {
   const trail = useRef([]);
   const [color, setColor] = useState("red");
   const timeoutRef = useRef(null);
-
   useEffect(() => {
     const handleMouseMove = (event) => {
       const { clientX: x, clientY: y } = event;
@@ -29,23 +28,18 @@ function ColorChangingCursor() {
 
         lineRef.current.setAttribute("d", pathData);
       }
-
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
-
       timeoutRef.current = setTimeout(() => {
         fadeOutTrail();
-      }, 200); // Delay before starting fade out
+      }, 200);
     };
-
     document.addEventListener("mousemove", handleMouseMove);
-
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-
   useEffect(() => {
     const changeColor = () => {
       const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
@@ -57,7 +51,6 @@ function ColorChangingCursor() {
 
     return () => clearInterval(colorInterval);
   }, []);
-
   const fadeOutTrail = () => {
     const interval = setInterval(() => {
       if (trail.current.length > 0) {
@@ -73,15 +66,13 @@ function ColorChangingCursor() {
               return "";
             })
             .join(" ");
-
           lineRef.current.setAttribute("d", pathData);
         }
       } else {
         clearInterval(interval);
       }
-    }, 50); // Adjust this value to control the fade-out speed
+    }, 50);
   };
-
   return (
     <svg
       className="fixed pointer-events-none"

@@ -1,4 +1,5 @@
 import LingkaranCursor from "../Elements/Cursor/lingkaran";
+import LoadingScreen from "../Elements/Loading/Home-Loading";
 import ScrollToTop from "../Elements/Scroll";
 import ContactSection from "../Fragments/Portofolio/ContactSection";
 import FooterSection from "../Fragments/Portofolio/FooterSection";
@@ -14,6 +15,7 @@ const SkillLayouts = () => {
       <LingkaranCursor></LingkaranCursor>
       <NavbarPortofolioNew style="bg-gradient-to-r from-[#e52d27] to-[#b31217]"></NavbarPortofolioNew>
       <main className="h-[100rem]">
+        <LoadingScreen />
         <SkillSection1 />
         <SkillSection2 />
         <SkillSection3 />

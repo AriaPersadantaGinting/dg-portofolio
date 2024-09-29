@@ -33,7 +33,7 @@ const FooterSection = (props) => {
             id="one"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className={`flex items-center justify-center lg:w-[16rem] md:w-[18rem] sm:w-[27.5rem] w-[32rem] rounded-xl bg-[#302830] mx-4  cursor-pointer h-16 mb-2 ${
+            className={`flex items-center justify-center lg:w-[16rem] md:w-[18rem] sm:w-[27.5rem] w-[32rem] rounded-xl bg-[#302830] mx-4 h-16 mb-2 ${
               isHovered === "one" ? styles2 : "bg-[#302830]"
             }`}
           >

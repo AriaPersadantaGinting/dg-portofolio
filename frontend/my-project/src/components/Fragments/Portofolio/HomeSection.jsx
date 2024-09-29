@@ -172,7 +172,7 @@ const HomeSection = () => {
       </div>
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView="imgEffect"
+        animate="imgEffect"
         variants={variants}
         className="ml-8 mr-8 mt-20 lg:ml-2 md:ml-2 lg:h-[40vw] md:mt-40 lg:mt-36 rounded-xl flex justify-center items-center relative"
       >

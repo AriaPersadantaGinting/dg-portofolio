@@ -20,7 +20,6 @@ import About from "./pages/about";
 import Project2 from "./pages/project2";
 import Contact2 from "./pages/contact2";
 import SkillLayouts from "./components/Layouts/SkillLayouts";
-import SkillSection3 from "./components/Fragments/Portofolio/Skill/SkillSection3";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +28,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/fts",
-    element: <SkillSection3 />,
+    // element: <HomeLoading />,
   },
   {
     path: "/welcome",
